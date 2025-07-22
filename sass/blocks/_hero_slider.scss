@@ -1,0 +1,17 @@
+.hero-slider {
+  width: 100%;
+  height: calc(85vh - 103px);
+  overflow: hidden;
+}
+
+.hero-slider .slide-item {
+  height: calc(85vh - 103px); // Use the same height as the container
+  overflow: hidden;
+}
+
+.hero-slider .slide-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

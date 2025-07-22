@@ -1,0 +1,91 @@
+.cards {
+  position: relative;
+  padding: 35px 0;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: url("/wp-content/themes/ouwehandvoorelkaar/images/banner.png")
+      no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    @media screen and (max-width: 768px) {
+      height: 40%;
+    }
+    @media screen and (max-width: 576px) {
+      height: 15%;
+    }
+  }
+
+  .section_banner__container {
+    width: 100%;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .row {
+    padding-top: 80px;
+    row-gap: 10px;
+    justify-content: center;
+
+    > div:nth-child(1) .card__container {
+      background-color: #fdc99b;
+    }
+
+    > div:nth-child(2) .card__container {
+      background-color: #fcae6c;
+    }
+
+    > div:nth-child(3) .card__container {
+      background-color: #f79541;
+    }
+
+    > div:nth-child(4) .card__container {
+      background-color: #f58220;
+    }
+  }
+
+  .card__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    padding: 30px;
+    height: 300px;
+    opacity: 0;
+    transform: translatex(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    &.in-view {
+      opacity: 1;
+      transform: translatex(0);
+    }
+
+    .image__container {
+      height: 40%;
+      @media screen and (max-width: 576px) {
+        height: 70%;
+        width: 50%;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    .card__text {
+      color: #363b44;
+    }
+  }
+}
