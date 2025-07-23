@@ -1,6 +1,6 @@
 .hero {
   &__container {
-    height: calc(85vh - 103px);
+    height: 100vh;
     position: relative;
     z-index: -1;
     img {
@@ -10,13 +10,36 @@
       object-position: center;
     }
   }
-  &__title-container {
+
+  &__overlay {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    width: 100%; // full width
+    height: 100%;
+    display: flex;
+    align-items: center; // vertically center content
+    @media screen and (max-width: 576px) {
+      align-items: flex-end;
+    }
+  }
+
+  &__title-container {
+    max-width: 550px;
+    margin-left: 125px; // distance from the very edge
+    margin-top: 100px;
+    @media screen and (max-width: 1024px) {
+      margin-left: 75px;
+      margin-top: 130px;
+    }
+    @media screen and (max-width: 576px) {
+      margin-left: 10px;
+      margin-bottom: 50px;
+      max-width: 300px;
+    }
     h1 {
-      color: red;
+      color: white;
+      font-size: clamp(2rem, 8vw, 5.5rem);
     }
   }
 }

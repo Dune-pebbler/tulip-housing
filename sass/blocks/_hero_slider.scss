@@ -1,11 +1,12 @@
 .hero-slider {
   width: 100%;
-  height: calc(85vh - 103px);
+  position: relative;
+  height: 100vh;
   overflow: hidden;
 }
 
 .hero-slider .slide-item {
-  height: calc(85vh - 103px); // Use the same height as the container
+  position: relative; // Use the same height as the container
   overflow: hidden;
 }
 

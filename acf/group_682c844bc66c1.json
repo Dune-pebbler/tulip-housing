@@ -54,7 +54,7 @@
                             "label": "Hero titel",
                             "name": "hero_title",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "wysiwyg",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -64,11 +64,28 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "maxlength": "",
                             "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_688096d8eb01e",
+                            "label": "hero button",
+                            "name": "hero_button",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "allow_in_bindings": 0
                         }
                     ],
                     "min": "",
@@ -162,6 +179,23 @@
                             "delay": 0
                         },
                         {
+                            "key": "field_6880e715a7220",
+                            "label": "tekst blok button",
+                            "name": "text_block_button",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "allow_in_bindings": 0
+                        },
+                        {
                             "key": "field_682d8269a3a50",
                             "label": "afbeelding blok",
                             "name": "image_block",
@@ -211,6 +245,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_6880a95d12923": {
+                    "key": "layout_6880a95d12923",
+                    "name": "ta_cards",
+                    "label": "Doelgroep cards",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6880ab4512925",
+                            "label": "Tekst blok",
+                            "name": "ta_text_block",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -236,5 +301,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748940753
+    "modified": 1753280261
 }
