@@ -45,6 +45,18 @@ get_header(); ?>
                         <?php get_template_part('template-parts/blocks/ta_cards'); ?>
                 <?php endif; ?>
 
+                <?php if (get_row_layout() === 'services'): ?>
+                        <?php get_template_part('template-parts/blocks/services'); ?>
+                <?php endif; ?>
+
+                <?php if (get_row_layout() === 'quotes'): ?>
+                        <?php get_template_part('template-parts/blocks/quotes'); ?>
+                <?php endif; ?>
+
+                <?php if (get_row_layout() === 'news'): ?>
+                        <?php get_template_part('template-parts/blocks/news'); ?>
+                <?php endif; ?>
+
         <?php endwhile; ?>
 <?php endif; ?>
 

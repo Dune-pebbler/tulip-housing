@@ -1,0 +1,21 @@
+.quotes {
+  padding: 50px 0px;
+  &__content-container {
+    justify-content: center;
+
+    align-items: center;
+
+    h2 {
+      color: $color1;
+      margin-bottom: 0px;
+    }
+    p {
+      color: #ed8895;
+      font-family: $font1;
+    }
+    .quote-source {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

@@ -276,6 +276,145 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_6881fb0bfc40e": {
+                    "key": "layout_6881fb0bfc40e",
+                    "name": "services",
+                    "label": "Diensten",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6881fb23fc410",
+                            "label": "diensten titel",
+                            "name": "services_title",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6882222781ac9": {
+                    "key": "layout_6882222781ac9",
+                    "name": "quotes",
+                    "label": "Quotes veld",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6882223081acb",
+                            "label": "Quotes herhaler",
+                            "name": "quotes_repeater",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Nieuwe rij",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_6882224681acc",
+                                    "label": "Quote veld",
+                                    "name": "quote_field",
+                                    "aria-label": "",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "allow_in_bindings": 0,
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0,
+                                    "parent_repeater": "field_6882223081acb"
+                                },
+                                {
+                                    "key": "field_6882226181acd",
+                                    "label": "Bron",
+                                    "name": "quote_source",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_6882223081acb"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6882307560f6a": {
+                    "key": "layout_6882307560f6a",
+                    "name": "news",
+                    "label": "Nieuws",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6882308260f6c",
+                            "label": "Titel blok",
+                            "name": "news_title",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -301,5 +440,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753280261
+    "modified": 1753362792
 }

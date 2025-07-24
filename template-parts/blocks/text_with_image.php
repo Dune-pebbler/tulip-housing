@@ -8,19 +8,19 @@ $reverse_layout = get_sub_field('reverse_layout');
     <div class="container-fluid">
         <div class="row justify-content-center<?= $reverse_layout ? ' reverse' : '' ?>">
 
-            <div class="col-md-6 col-lg-6">
-                <div class="text_with_image__text-container slide-left-on-scroll">
-                    <?= $text_block; ?>
+            <div class="col-lg-6">
+                <div class="text_with_image__text-container-container">
+                    <div class="text_with_image__text-container slide-left-on-scroll">
+                        <?= $text_block; ?>
 
-                    <div class="text_with_image__button-container">
-                        <a class="btn" href="<?= $text_block_button['url']; ?>"><?= $text_block_button['title']; ?> </a>
+                        <div class="text_with_image__button-container">
+                            <a class="btn" href="<?= $text_block_button['url']; ?>"><?= $text_block_button['title']; ?>
+                            </a>
+                        </div>
                     </div>
                 </div>
-
             </div>
-
-
-            <div class="col-md-6 col-lg-6 p-0">
+            <div class="col-lg-6 p-0">
                 <div class="text_with_image__image-container slide-right-on-scroll">
                     <img src="<?= $image_block['url']; ?>" alt="">
                 </div>

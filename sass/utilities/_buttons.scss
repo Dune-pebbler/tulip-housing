@@ -9,7 +9,6 @@
   text-align: center;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-  text-transform: uppercase;
 
   color: get-contrast-color($btn-color1);
   @media (max-width: $screen-md-max) {

@@ -189,74 +189,45 @@ function setOnBtnAjaxFilter() {
 function initInView() {
   // Check if inView is available (library loaded)
   if (typeof inView !== "undefined") {
-    // FADE IN FROM BOTTOM (original)
-    inView(".fade-in-on-scroll").on("enter", function (el) {
-      console.log("Fade in element entered view:", el);
-      el.classList.add("in-view");
-    });
+    // Helper to set enter/exit behavior
+    function setInView(selector) {
+      inView(selector)
+        .on("enter", function (el) {
+          el.classList.add("in-view");
+        })
+        .on("exit", function (el) {
+          el.classList.remove("in-view"); // Reset when leaving view
+        });
+    }
 
-    // SLIDE IN FROM LEFT
-    inView(".slide-left-on-scroll").on("enter", function (el) {
-      console.log("Slide left element entered view:", el);
-      el.classList.add("in-view");
-    });
+    // Apply to all your animations
+    setInView(".fade-in-on-scroll");
+    setInView(".slide-left-on-scroll");
+    setInView(".slide-right-on-scroll");
+    setInView(".scale-up-on-scroll");
+    setInView(".rotate-in-on-scroll");
+    setInView(".bounce-in-on-scroll");
+    setInView(".flip-in-on-scroll");
+    setInView(".typewriter-on-scroll");
+    setInView(".delayed-on-scroll");
 
-    // SLIDE IN FROM RIGHT
-    inView(".slide-right-on-scroll").on("enter", function (el) {
-      console.log("Slide right element entered view:", el);
-      el.classList.add("in-view");
-    });
-
-    // SCALE UP ANIMATION
-    inView(".scale-up-on-scroll").on("enter", function (el) {
-      console.log("Scale up element entered view:", el);
-      el.classList.add("in-view");
-    });
-
-    // ROTATE IN ANIMATION
-    inView(".rotate-in-on-scroll").on("enter", function (el) {
-      console.log("Rotate in element entered view:", el);
-      el.classList.add("in-view");
-    });
-
-    // STAGGER ANIMATION (for multiple elements)
-    inView(".stagger-on-scroll").on("enter", function (el) {
-      console.log("Stagger element entered view:", el);
-
-      // Find all child elements to stagger
-      var children = el.querySelectorAll(".stagger-item");
-      children.forEach(function (child, index) {
-        setTimeout(function () {
-          child.classList.add("in-view");
-        }, index * 100); // 100ms delay between each item
+    // For staggered items
+    inView(".stagger-on-scroll")
+      .on("enter", function (el) {
+        var children = el.querySelectorAll(".stagger-item");
+        children.forEach(function (child, index) {
+          setTimeout(function () {
+            child.classList.add("in-view");
+          }, index * 100);
+        });
+      })
+      .on("exit", function (el) {
+        // Reset staggered items
+        var children = el.querySelectorAll(".stagger-item");
+        children.forEach(function (child) {
+          child.classList.remove("in-view");
+        });
       });
-    });
-
-    // BOUNCE IN ANIMATION
-    inView(".bounce-in-on-scroll").on("enter", function (el) {
-      console.log("Bounce in element entered view:", el);
-      el.classList.add("in-view");
-    });
-
-    // FLIP IN ANIMATION
-    inView(".flip-in-on-scroll").on("enter", function (el) {
-      console.log("Flip in element entered view:", el);
-      el.classList.add("in-view");
-    });
-
-    // TYPEWRITER EFFECT
-    inView(".typewriter-on-scroll").on("enter", function (el) {
-      console.log("Typewriter element entered view:", el);
-      el.classList.add("in-view");
-    });
-
-    // DELAYED ANIMATION (appears after a delay)
-    inView(".delayed-on-scroll").on("enter", function (el) {
-      console.log("Delayed element entered view:", el);
-      setTimeout(function () {
-        el.classList.add("in-view");
-      }, 500); // 500ms delay
-    });
 
     console.log("All inView listeners set up successfully");
   } else {

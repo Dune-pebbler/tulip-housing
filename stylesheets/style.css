@@ -95,7 +95,6 @@
   text-align: center;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-  text-transform: uppercase;
   color: get-contrast-color(black);
 }
 @media (max-width: 992px) {
@@ -1004,11 +1003,18 @@ p + .btn, p + .btn-secondary, p + .btn-outline {
     height: 100%;
   }
 }
+.text_with_image__text-container-container {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
 .text_with_image__text-container {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 550px;
   align-items: flex-start;
 }
 @media screen and (max-width: 768px) {
@@ -1382,6 +1388,117 @@ p + .btn, p + .btn-secondary, p + .btn-outline {
   left: 0;
   background: #ecf4cb;
   z-index: -1;
+}
+
+.services {
+  padding: 30px 0;
+  position: relative;
+}
+.services:before {
+  content: " ";
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background-color: #b50d43;
+}
+.services .owl-stage-outer {
+  padding-top: 20px;
+}
+.services .services__cards-container {
+  padding-bottom: 50px;
+}
+.services .services__cards-container .service-card {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  /* Overlay */
+  /* Title container */
+  /* Hover states */
+}
+.services .services__cards-container .service-card:hover {
+  transform: translateY(-20px);
+}
+.services .services__cards-container .service-card a {
+  display: block;
+  position: relative;
+}
+.services .services__cards-container .service-card .service-card__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.services .services__cards-container .service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(54, 54, 55, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 20px;
+  z-index: 1;
+}
+.services .services__cards-container .service-card .service-card__title-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.services .services__cards-container .service-card .service-card__title-container .service-card__icon {
+  margin-bottom: 10px;
+}
+.services .services__cards-container .service-card .service-card__title-container .service-card__icon svg {
+  width: 55px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.services .services__cards-container .service-card .service-card__title-container .service-card__title {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0;
+  font-weight: 700;
+  font-family: "DM Sans", sans-serif;
+}
+.services .services__cards-container .service-card:hover::before {
+  opacity: 1;
+}
+.services .services__cards-container .service-card:hover .service-card__title-container {
+  opacity: 1;
+}
+
+.quotes {
+  padding: 50px 0px;
+}
+.quotes__content-container {
+  justify-content: center;
+  align-items: center;
+}
+.quotes__content-container h2 {
+  color: #b50d43;
+  margin-bottom: 0px;
+}
+.quotes__content-container p {
+  color: #ed8895;
+  font-family: "aptly", sans-serif;
+}
+.quotes__content-container .quote-source {
+  display: flex;
+  justify-content: center;
 }
 
 header {
