@@ -109,3 +109,16 @@
     background-color: $color1;
   }
 }
+.news-button {
+  color: #9cac77 !important;
+  background-color: white !important;
+  padding: 12px 33px !important;
+  border-radius: 35px !important;
+  text-decoration: none !important;
+  font-size: clamp(0.75rem, 4vw, 1.2rem) !important;
+
+  &:hover {
+    color: white !important;
+    background-color: #9cac77 !important;
+  }
+}

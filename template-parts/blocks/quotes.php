@@ -37,7 +37,7 @@ $quotes_repeater = get_sub_field('quotes_repeater');
             items: 1,
             loop: true,
             autoplay: true,
-            dots: true,
+            dots: false,
             nav: false,
             autoplayTimeout: 5000,
             autoplayHoverPause: true
