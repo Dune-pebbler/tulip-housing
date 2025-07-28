@@ -415,6 +415,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_6887237eac153": {
+                    "key": "layout_6887237eac153",
+                    "name": "corevalues",
+                    "label": "Kernwaarden",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68873bfc10ec7",
+                            "label": "kernwaarden titel",
+                            "name": "corevalues_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -440,5 +471,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753362792
+    "modified": 1753693371
 }

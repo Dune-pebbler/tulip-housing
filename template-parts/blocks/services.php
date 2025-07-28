@@ -64,7 +64,7 @@ $services_posts = new WP_Query(array(
         $('.services__cards-container').owlCarousel({
             loop: true,
             margin: 20,
-            nav: true,
+            nav: false,
             dots: false,
             autoplay: false,
             responsive: {

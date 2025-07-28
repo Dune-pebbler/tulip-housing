@@ -1622,6 +1622,116 @@ p + .btn, p + .btn-secondary, p + .btn-outline {
   background: #d6f2b9;
 }
 
+.corevalues {
+  position: relative;
+  padding: 70px 0;
+  background-color: #b50d43;
+}
+.corevalues::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 18%;
+  width: 410px;
+  height: 412px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="410.327" height="511.896" viewBox="0 0 410.327 511.896"><defs><clipPath id="clip-path"><rect id="Rectangle_199" width="410.327" height="511.896" fill="none"/></clipPath></defs><g id="Group_122" opacity="0.198"><g id="Group_121" clip-path="url(%23clip-path)"><path id="Path_175" d="M216.964,411.078c-4.569,0-9.235-.116-14.027-.357C73.157,404.178,6.967,324.527,6.207,173.978,5.827,98.951,1.578,66.616.281,58.493A22.29,22.29,0,0,1,27.894,33.424C136.738,61.7,162.841,120.8,188.09,177.968c5.477,12.4,11.14,25.222,17.613,37.492,31.26,59.267,79.707,56.894,81.76,56.783.3-.019.816-.046,1.117-.051,22.558-.394,39.782-7.326,52.641-21.191,34.193-36.862,29.772-113.362,28.109-142.162-.241-4.18-.431-7.572-.491-10.018-.255-10.412-.338-18.711-.236-25.435C263.743,107.774,255.124,201.679,254.79,205.947a19.694,19.694,0,0,1-39.286-2.822c.1-1.423,11.738-142.268,170.248-174.956a20.17,20.17,0,0,1,18.54,5.635c8.586,8.749,5.88,20.736,4.583,26.5-.649,2.873-1.293,11.728-.663,37.562.051,2.122.227,5.074.44,8.707,7.053,122.051-26.079,157.769-38.554,171.216-20.167,21.742-47.214,33.1-80.393,33.781-8.878.487-77.047,1.5-118.84-77.728-7.113-13.48-13.058-26.941-18.8-39.958C130.886,145.934,112.318,103.9,42.171,78.919c1.622,19.661,3.2,50.036,3.424,94.864.653,129.363,51.278,192.152,159.326,197.6,92.051,4.634,132.208-44.726,133.876-46.83a19.694,19.694,0,0,1,31.149,24.105c-2.039,2.655-49.184,62.413-152.982,62.418" transform="translate(0.002 100.819)" fill="%23fff"/><path id="Path_176" d="M218.439,153.1A19.7,19.7,0,0,1,198.745,133.4V98.922L129.177,44.673,59.614,98.922V133.4a19.694,19.694,0,1,1-39.388,0v-44.1a19.709,19.709,0,0,1,7.581-15.533l89.262-69.61a19.7,19.7,0,0,1,24.221,0l89.262,69.61a19.709,19.709,0,0,1,7.581,15.533v44.1A19.7,19.7,0,0,1,218.439,153.1" transform="translate(73.498 0.002)" fill="%23fff"/></g></g></svg>') no-repeat center center;
+  background-size: contain;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 0;
+}
+@media screen and (max-width: 576px) {
+  .corevalues::before {
+    display: none;
+  }
+}
+.corevalues__title-container h2 {
+  color: white;
+  font-weight: 400;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: left;
+}
+.corevalues .desktop-layout {
+  display: flex;
+}
+.corevalues .mobile-layout {
+  display: none;
+}
+.corevalues .cv-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.corevalues .cv-titles .cv-title {
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
+  margin: 0px;
+  margin-bottom: 15px;
+}
+.corevalues .cv-titles .cv-title.active {
+  color: #fcb6cc;
+}
+.corevalues .cv-messages .cv-message {
+  display: none;
+}
+.corevalues .cv-messages .cv-message.active {
+  display: block;
+}
+.corevalues .cv-messages .cv-message.active p {
+  color: white;
+  margin: 0px;
+}
+.corevalues .mobile-layout .cv-accordion-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 0;
+}
+.corevalues .mobile-layout .cv-accordion-item .cv-title {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.corevalues .mobile-layout .cv-accordion-item .cv-title .chevron {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+  margin-left: 10px;
+}
+.corevalues .mobile-layout .cv-accordion-item .cv-title.active {
+  color: #fcb6cc;
+}
+.corevalues .mobile-layout .cv-accordion-item .cv-title.active .chevron {
+  transform: rotate(-135deg);
+}
+.corevalues .mobile-layout .cv-accordion-item .cv-message {
+  display: none;
+  margin-top: 0.5rem;
+  color: white;
+  font-weight: 200;
+}
+.corevalues .mobile-layout .cv-accordion-item .cv-message p {
+  color: white;
+}
+.corevalues .mobile-layout .cv-accordion-item .cv-message.active {
+  display: block;
+}
+@media (max-width: 768px) {
+  .corevalues .desktop-layout {
+    display: none;
+  }
+  .corevalues .mobile-layout {
+    display: block;
+  }
+}
+
 header {
   position: sticky;
   top: 0;
@@ -1859,7 +1969,6 @@ header {
 }
 
 footer {
-  background-color: #363b44;
   position: relative;
 }
 footer #copyright {
@@ -1869,10 +1978,41 @@ footer #copyright {
   align-items: center;
   justify-content: center;
 }
+footer .footer-banner {
+  background: #fadcdf;
+  padding: 50px 0px;
+}
+footer .footer-banner__content-container .footer-items {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+@media screen and (max-width: 576px) {
+  footer .footer-banner__content-container .footer-items {
+    flex-direction: column;
+  }
+}
+footer .footer-banner__content-container .footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+footer .footer-banner__content-container .footer-item p a {
+  transition: all 0.3s ease;
+}
+footer .footer-banner__content-container .footer-item p a:hover {
+  color: #b50d43 !important;
+}
+footer .footer-banner__content-container .footer-item-icon img {
+  height: 50px;
+  margin-bottom: 10px;
+}
 footer .footer-main {
   display: flex;
   align-items: center;
-  padding: 150px 0px;
+  padding: 80px 0px;
 }
 @media screen and (max-width: 768px) {
   footer .footer-main {
@@ -1886,8 +2026,8 @@ footer .footer-main .row .footer__image-container {
   padding-bottom: 20px;
 }
 footer .footer-main .row .footer__image-container img {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 152px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -1898,7 +2038,7 @@ footer .footer-main .row .content-container {
   height: 100%;
 }
 footer .footer-main .row .content-container p {
-  color: white;
+  color: black;
   margin: 0;
 }
 @media screen and (max-width: 768px) {
@@ -1913,6 +2053,10 @@ footer .footer-main .row .content-container a {
 }
 footer .footer-main .row .content-container a:hover {
   color: #f58220;
+}
+footer .footer-main .row .socials {
+  display: flex;
+  justify-content: end;
 }
 
 section.error-404 {

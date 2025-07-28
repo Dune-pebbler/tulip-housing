@@ -57,6 +57,10 @@ get_header(); ?>
                         <?php get_template_part('template-parts/blocks/news'); ?>
                 <?php endif; ?>
 
+                <?php if (get_row_layout() === 'corevalues'): ?>
+                        <?php get_template_part('template-parts/blocks/corevalues'); ?>
+                <?php endif; ?>
+
         <?php endwhile; ?>
 <?php endif; ?>
 
