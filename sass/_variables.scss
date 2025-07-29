@@ -47,3 +47,45 @@ $gutter: 13.5px;
     max-width: 1600px !important;
   }
 }
+// ----------------------- Custom  ----------------------- //
+
+.qwt {
+  background-color: white;
+}
+.qdr {
+  background-color: $color1;
+  h2 {
+    color: white !important;
+  }
+  p {
+    color: white !important;
+  }
+}
+.qlg {
+  background-color: #b5cb95;
+  h2 {
+    color: white !important;
+  }
+  p {
+    color: white !important;
+  }
+}
+
+.qlr {
+  background-color: #ed8895;
+  h2 {
+    color: white !important;
+  }
+  p {
+    color: white !important;
+  }
+}
+.qor {
+  background-color: #fba48b;
+  h2 {
+    color: white !important;
+  }
+  p {
+    color: white !important;
+  }
+}

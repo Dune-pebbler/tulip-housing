@@ -151,6 +151,84 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_6888b46aaa620": {
+                    "key": "layout_6888b46aaa620",
+                    "name": "doelgroep_hero",
+                    "label": "Doelgroep hero",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6888b47aaa622",
+                            "label": "doelgroep hero afbeelding",
+                            "name": "doelgroep_hero_img",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_6888b498aa623",
+                            "label": "doelgroep hero titel",
+                            "name": "doelgroep_hero_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_6888b4a7aa624",
+                            "label": "doelgroep hero tekst",
+                            "name": "doelgroep_hero_txt",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_682d7ac6a3a4d": {
                     "key": "layout_682d7ac6a3a4d",
                     "name": "text_with_image",
@@ -246,6 +324,101 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_6888cb9c638b3": {
+                    "key": "layout_6888cb9c638b3",
+                    "name": "doelgroep_text_with_image",
+                    "label": "Doelgroep tekst met afbeelding",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6888cb9c638b4",
+                            "label": "Tekst block",
+                            "name": "text_block",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_6888cb9c638b5",
+                            "label": "tekst blok button",
+                            "name": "text_block_button",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "allow_in_bindings": 0
+                        },
+                        {
+                            "key": "field_6888cb9c638b6",
+                            "label": "afbeelding blok",
+                            "name": "image_block",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_6888cb9c638b7",
+                            "label": "layout omdraaien",
+                            "name": "reverse_layout",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "allow_in_bindings": 0,
+                            "ui_on_text": "Ja",
+                            "ui_off_text": "Nee",
+                            "ui": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_6880a95d12923": {
                     "key": "layout_6880a95d12923",
                     "name": "ta_cards",
@@ -314,6 +487,38 @@
                     "label": "Quotes veld",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_6888be0c97c58",
+                            "label": "achtergrondkleur",
+                            "name": "backgroundcolor",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "qwt": "Wit",
+                                "qdr": "Donker-roze",
+                                "qlg": "Groen",
+                                "qlr": "Licht-roze",
+                                "qor": "Oranje"
+                            },
+                            "default_value": false,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
+                        },
                         {
                             "key": "field_6882223081acb",
                             "label": "Quotes herhaler",
@@ -460,6 +665,13 @@
                 "operator": "==",
                 "value": "template-page_builder.php"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "doelgroep"
+            }
         ]
     ],
     "menu_order": 0,
@@ -471,5 +683,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753693371
+    "modified": 1753795514
 }

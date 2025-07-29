@@ -8,67 +8,59 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/dfb3xvw.css">
-  <title>
-    <?php wp_title(); ?>
-  </title>
+  <title><?php wp_title(); ?></title>
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class() ?>>
-  <header>
-    <nav>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 nav-container static">
+<body <?php body_class(); ?>>
 
-            <div class="logo">
-              <a href="/" title="Home">
-                <?php $header_logo = get_field('header_logo', 'option'); ?>
-                <?php if ($header_logo): ?>
-                  <img src="<?= $header_logo['url']; ?>" alt="">
-                <?php endif; ?>
-              </a>
-            </div>
+  <!-- Absolute wrapper so the header sits ON TOP of hero -->
+  <div class="header-wrapper">
+    <header>
+      <nav>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 nav-container">
 
-            <!-- menu items (mobile and desktop)-->
-            <div id="nav-items">
-              <div id="cross">
-                <div class="cross-line-1"></div>
-                <div class="cross-line-2"></div>
+              <div class="logo">
+                <a href="/" title="Home">
+                  <?php $header_logo = get_field('header_logo', 'option'); ?>
+                  <?php if ($header_logo): ?>
+                    <img src="<?= $header_logo['url']; ?>" alt="">
+                  <?php endif; ?>
+                </a>
               </div>
-              <?php
-              wp_nav_menu([
-                'theme_location' => 'primary',
-                'menu_class' => 'primary-nav',
-              ]);
-              ?>
-              <!-- search -->
-              <!-- <div class="search">
-                <form role="search" method="get" class="searchform" action="/">
-                  <input type="text" placeholder="Zoek uw product.." name="s" id="s">
-                  <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
-                </form>
-              </div> -->
-            </div>
-            <!-- end menu items -->
 
-            <div class="hamburger">
-              <div class="hamburger-line"></div>
-              <div class="hamburger-line"></div>
-              <div class="hamburger-line"></div>
+              <!-- menu items -->
+              <div id="nav-items">
+                <div id="cross">
+                  <div class="cross-line-1"></div>
+                  <div class="cross-line-2"></div>
+                </div>
+                <?php
+                wp_nav_menu([
+                  'theme_location' => 'primary',
+                  'menu_class' => 'primary-nav',
+                ]);
+                ?>
+              </div>
+
+              <!-- hamburger -->
+              <div class="hamburger">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+              </div>
+
             </div>
           </div>
         </div>
-      </div>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
+  </div>
+
   <main>

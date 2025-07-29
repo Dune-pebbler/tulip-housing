@@ -40,7 +40,7 @@ $socials_repeater = get_field('socials', 'option');
     <div class="container-fluid">
       <div class="reference">
         <div class="row justify-content-around">
-          <div class="col-8 col-lg-2 p-0">
+          <div class="col-12 col-lg-2 p-0">
             <div class="footer__image-container">
               <?php if ($footer_logo): ?>
                 <a href="/home">
@@ -61,7 +61,7 @@ $socials_repeater = get_field('socials', 'option');
               </div>
             <?php endif; ?>
           </div>
-          <div class="col-lg-3">
+          <div class="col-12 col-lg-3">
             <div class="socials">
               <?php if (have_rows('socials', 'option')): ?>
                 <div class="socials-row" style="display: flex; gap: 20px;">

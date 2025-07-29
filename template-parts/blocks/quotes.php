@@ -1,7 +1,8 @@
 <?php
 $quotes_repeater = get_sub_field('quotes_repeater');
+$backgroundcolor = get_sub_field('backgroundcolor');
 ?>
-<section class="quotes">
+<section class="quotes <?= $backgroundcolor; ?>">
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-10">

@@ -1,6 +1,7 @@
 <?php
 /*
  * Template Name: Page Builder
+ * Template Post Type: page, doelgroep
  */
 
 get_header(); ?>
@@ -13,6 +14,10 @@ get_header(); ?>
                         <?php get_template_part('template-parts/blocks/hero_banner'); ?>
                 <?php endif; ?>
 
+                <?php if (get_row_layout() === 'doelgroep_hero'): ?>
+                        <?php get_template_part('template-parts/blocks/doelgroep_hero'); ?>
+                <?php endif; ?>
+
                 <?php if (get_row_layout() === 'hero_slider'): ?>
                         <?php get_template_part('template-parts/blocks/hero_slider'); ?>
                 <?php endif; ?>
@@ -23,6 +28,10 @@ get_header(); ?>
 
                 <?php if (get_row_layout() === 'text_with_image'): ?>
                         <?php get_template_part('template-parts/blocks/text_with_image'); ?>
+                <?php endif; ?>
+
+                <?php if (get_row_layout() === 'doelgroep_text_with_image'): ?>
+                        <?php get_template_part('template-parts/blocks/doelgroep_text_image'); ?>
                 <?php endif; ?>
 
                 <?php if (get_row_layout() === 'text_block'): ?>

@@ -1,0 +1,29 @@
+.doelgroep-hero {
+  &__text-container {
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+    height: 100%;
+    h1 {
+      color: black;
+      font-size: clamp(2rem, 8vw, 7rem);
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+    }
+    p {
+      max-width: 550px;
+      font-weight: 700;
+    }
+  }
+  &__image-container {
+    width: 100%;
+    height: 600px; // don't force full height
+    img {
+      width: 100% !important;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
