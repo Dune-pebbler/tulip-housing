@@ -224,6 +224,27 @@
                             "toolbar": "full",
                             "media_upload": 1,
                             "delay": 0
+                        },
+                        {
+                            "key": "field_688b5b6150ce5",
+                            "label": "Spiegel lay-out",
+                            "name": "mirror_lay-out",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "allow_in_bindings": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 1
                         }
                     ],
                     "min": "",
@@ -331,6 +352,59 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_6888cb9c638b7",
+                            "label": "layout omdraaien",
+                            "name": "reverse_layout",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "allow_in_bindings": 0,
+                            "ui_on_text": "Ja",
+                            "ui_off_text": "Nee",
+                            "ui": 1
+                        },
+                        {
+                            "key": "field_688a05e6b4d61",
+                            "label": "kleur kiezer",
+                            "name": "before_color_picker",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "ddr": "Donker-roze",
+                                "dlr": "Licht-roze",
+                                "dgr": "Groen",
+                                "dor": "Oranje",
+                                "dwh": "Wit"
+                            },
+                            "default_value": false,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
+                        },
+                        {
                             "key": "field_6888cb9c638b4",
                             "label": "Tekst block",
                             "name": "text_block",
@@ -350,23 +424,6 @@
                             "toolbar": "full",
                             "media_upload": 1,
                             "delay": 0
-                        },
-                        {
-                            "key": "field_6888cb9c638b5",
-                            "label": "tekst blok button",
-                            "name": "text_block_button",
-                            "aria-label": "",
-                            "type": "link",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "allow_in_bindings": 0
                         },
                         {
                             "key": "field_6888cb9c638b6",
@@ -393,9 +450,19 @@
                             "mime_types": "",
                             "allow_in_bindings": 0,
                             "preview_size": "medium"
-                        },
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_688b63d814a37": {
+                    "key": "layout_688b63d814a37",
+                    "name": "service_text_with_image",
+                    "label": "Diensten tekst met afbeelding",
+                    "display": "block",
+                    "sub_fields": [
                         {
-                            "key": "field_6888cb9c638b7",
+                            "key": "field_688b63d814a38",
                             "label": "layout omdraaien",
                             "name": "reverse_layout",
                             "aria-label": "",
@@ -404,7 +471,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -414,6 +481,82 @@
                             "ui_on_text": "Ja",
                             "ui_off_text": "Nee",
                             "ui": 1
+                        },
+                        {
+                            "key": "field_688b63d814a39",
+                            "label": "achtergrond kleur kiezer",
+                            "name": "background_color_picker",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "sdr": "Donker-roze",
+                                "swh": "Wit"
+                            },
+                            "default_value": false,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
+                        },
+                        {
+                            "key": "field_688b63d814a3a",
+                            "label": "Tekst block",
+                            "name": "text_block",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_688b63d814a3b",
+                            "label": "afbeelding blok",
+                            "name": "image_block",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "medium"
                         }
                     ],
                     "min": "",
@@ -683,5 +826,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753795514
+    "modified": 1753967385
 }

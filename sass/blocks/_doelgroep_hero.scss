@@ -1,4 +1,9 @@
 .doelgroep-hero {
+  .reverse {
+    .row {
+      flex-direction: row-reverse;
+    }
+  }
   &__text-container {
     display: flex;
     justify-content: center;

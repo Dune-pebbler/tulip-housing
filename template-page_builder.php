@@ -1,7 +1,7 @@
 <?php
 /*
  * Template Name: Page Builder
- * Template Post Type: page, doelgroep
+ * Template Post Type: page, doelgroep, dienst
  */
 
 get_header(); ?>
@@ -32,6 +32,10 @@ get_header(); ?>
 
                 <?php if (get_row_layout() === 'doelgroep_text_with_image'): ?>
                         <?php get_template_part('template-parts/blocks/doelgroep_text_image'); ?>
+                <?php endif; ?>
+
+                <?php if (get_row_layout() === 'service_text_with_image'): ?>
+                        <?php get_template_part('template-parts/blocks/service_text_image'); ?>
                 <?php endif; ?>
 
                 <?php if (get_row_layout() === 'text_block'): ?>

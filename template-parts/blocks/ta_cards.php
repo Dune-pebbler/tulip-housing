@@ -2,12 +2,15 @@
 $ta_text = get_sub_field('ta_text_block');
 
 // Query posts with meta key "doelgroep"
+$current_id = get_the_ID();
+
 $doelgroep_posts = new WP_Query(array(
     'post_type' => 'doelgroep',
     'posts_per_page' => 4,
     'orderby' => 'date',
-    'order' => 'ASC'
+    'order' => 'ASC',
 ));
+
 ?>
 <section class="ta-cards">
     <div class="container">
