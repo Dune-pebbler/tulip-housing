@@ -1,5 +1,8 @@
 <?php
 $services_title = get_sub_field('services_title');
+$show_red_before = get_sub_field('show_red_before');
+$service_background_color = get_sub_field('service_background_color');
+
 
 $services_posts = new WP_Query(array(
     'post_type' => 'dienst',
@@ -8,8 +11,8 @@ $services_posts = new WP_Query(array(
     'order' => 'ASC'
 ));
 ?>
-<section class="services fade-in-on-scroll">
-    <div class="container">
+<section class="services <?= $service_background_color; ?> <?= $show_red_before ? 'has-colored-before' : ''; ?>">
+    <div class="container fade-in-on-scroll">
         <div class="row">
             <div class="col-12">
                 <?php if ($services_title): ?>

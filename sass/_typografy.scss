@@ -43,21 +43,13 @@ h6 {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: clamp(20px, 4vw + 1rem, 88px);
   color: black;
   margin-top: 24px;
   font-weight: 100;
   letter-spacing: 0.5px;
-  @media (max-width: $screen-lg-max) {
-    font-size: 28px;
-  }
-  @media (max-width: $screen-md-max) {
-    font-size: 24px;
-  }
-  @media (max-width: $screen-sm-max) {
-    font-size: 20px;
-  }
 }
+
 h2 {
   font-size: 40px;
   color: black;

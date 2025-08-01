@@ -1,7 +1,7 @@
 <?php
 /*
  * Template Name: Page Builder
- * Template Post Type: page, doelgroep, dienst
+ * Template Post Type: page, doelgroep, dienst, post
  */
 
 get_header(); ?>
@@ -12,6 +12,10 @@ get_header(); ?>
 
                 <?php if (get_row_layout() === 'hero_banner'): ?>
                         <?php get_template_part('template-parts/blocks/hero_banner'); ?>
+                <?php endif; ?>
+
+                <?php if (get_row_layout() === 'img_banner'): ?>
+                        <?php get_template_part('template-parts/blocks/img_banner'); ?>
                 <?php endif; ?>
 
                 <?php if (get_row_layout() === 'doelgroep_hero'): ?>
@@ -28,6 +32,10 @@ get_header(); ?>
 
                 <?php if (get_row_layout() === 'text_with_image'): ?>
                         <?php get_template_part('template-parts/blocks/text_with_image'); ?>
+                <?php endif; ?>
+
+                <?php if (get_row_layout() === 'text_field'): ?>
+                        <?php get_template_part('template-parts/blocks/text_block'); ?>
                 <?php endif; ?>
 
                 <?php if (get_row_layout() === 'doelgroep_text_with_image'): ?>

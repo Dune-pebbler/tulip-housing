@@ -8,7 +8,13 @@
     bottom: 0;
     left: 0;
     position: absolute;
-    background-color: $color1;
+    background-color: #fff; // default is white
+  }
+
+  &.has-colored-before {
+    &:before {
+      background-color: $color1; // when ACF is true
+    }
   }
 
   .owl-stage-outer {
