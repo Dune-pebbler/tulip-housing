@@ -135,6 +135,14 @@ $role_object->add_cap('edit_theme_options');
 //   //     acf_add_options_sub_page( 'Side Menu' );
 // }
 
+function enqueue_wp_api_settings()
+{
+  wp_localize_script('main-js', 'wpApiSettings', array(
+    'root' => esc_url_raw(rest_url()),
+    'nonce' => wp_create_nonce('wp_rest')
+  ));
+}
+add_action('wp_enqueue_scripts', 'enqueue_wp_api_settings');
 
 
 ?>

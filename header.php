@@ -22,9 +22,9 @@
   <div class="header-wrapper">
     <header>
       <nav>
-        <div class="container">
+        <div class="container-fluid">
           <div class="row">
-            <div class="col-12 nav-container">
+            <div class="col-6 nav-container">
 
               <div class="logo">
                 <a href="/" title="Home">

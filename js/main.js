@@ -281,3 +281,153 @@ function initHeroSliderTwoCols() {
     }, 5000);
   }
 }
+// News Load More Handler
+function initNewsLoadMore() {
+  const loadMoreButton = document.getElementById("load-more-news");
+
+  if (!loadMoreButton) return; // Exit if button doesn't exist on this page
+
+  let currentPage = 2;
+  let isLoading = false;
+  const postsPerPage = 9;
+
+  loadMoreButton.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    if (isLoading) return;
+
+    const totalPosts = parseInt(this.dataset.total);
+    const loadedPosts = (currentPage - 1) * postsPerPage;
+
+    if (loadedPosts >= totalPosts) {
+      this.style.display = "none";
+      return;
+    }
+
+    isLoading = true;
+    this.textContent = "Laden...";
+    this.disabled = true;
+
+    // Get the WordPress REST API URL (you'll need to set this in your PHP)
+    const restUrl = window.wpApiSettings
+      ? window.wpApiSettings.root + "wp/v2/posts"
+      : "/wp-json/wp/v2/posts";
+
+    const params = new URLSearchParams({
+      per_page: postsPerPage,
+      page: currentPage,
+      _embed: "true",
+    });
+
+    fetch(`${restUrl}?${params}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((posts) => {
+        if (posts && posts.length > 0) {
+          const container = document.getElementById("news-grid-container");
+          const newContent = createNewsItemsHTML(posts);
+          container.insertAdjacentHTML("beforeend", newContent);
+
+          currentPage++;
+
+          // Check if we've loaded all posts
+          const newLoadedPosts = (currentPage - 1) * postsPerPage;
+          if (newLoadedPosts >= totalPosts) {
+            loadMoreButton.style.display = "none";
+          } else {
+            loadMoreButton.textContent = "Laad meer";
+            loadMoreButton.disabled = false;
+          }
+        } else {
+          loadMoreButton.style.display = "none";
+        }
+      })
+      .catch((error) => {
+        console.error("Failed to load posts:", error);
+        loadMoreButton.textContent = "Fout bij laden - probeer opnieuw";
+
+        setTimeout(() => {
+          loadMoreButton.textContent = "Laad meer";
+          loadMoreButton.disabled = false;
+        }, 2000);
+      })
+      .finally(() => {
+        isLoading = false;
+      });
+  });
+}
+
+// Helper function to create HTML for news items
+function createNewsItemsHTML(posts) {
+  return posts
+    .map((post) => {
+      let imageUrl = "";
+
+      // Get featured image
+      if (
+        post._embedded &&
+        post._embedded["wp:featuredmedia"] &&
+        post._embedded["wp:featuredmedia"][0]
+      ) {
+        imageUrl = post._embedded["wp:featuredmedia"][0].source_url;
+      }
+
+      // Create excerpt (strip HTML and limit words)
+      let excerpt = post.excerpt.rendered.replace(/<[^>]*>/g, "").trim();
+      const words = excerpt.split(" ");
+      if (words.length > 20) {
+        excerpt = words.slice(0, 20).join(" ") + "...";
+      }
+
+      // Escape HTML attributes
+      const title = escapeHtml(post.title.rendered);
+      const link = escapeHtml(post.link);
+
+      return `
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+              <div class="news-grid-item">
+                  ${
+                    imageUrl
+                      ? `
+                      <div class="news-grid-image">
+                          <img src="${escapeHtml(
+                            imageUrl
+                          )}" alt="${title}" class="img-fluid">
+                      </div>
+                  `
+                      : ""
+                  }
+                  <div class="news-grid-content">
+                      <h3>${title}</h3>
+                      <p>${escapeHtml(excerpt)}</p>
+                      <a href="${link}" class="btn news-grid-button">Lees verder</a>
+                  </div>
+              </div>
+          </div>
+      `;
+    })
+    .join("");
+}
+
+// Helper function to escape HTML
+function escapeHtml(text) {
+  const div = document.createElement("div");
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+// Initialize when DOM is ready
+document.addEventListener("DOMContentLoaded", function () {
+  initNewsLoadMore();
+});
+
+// Also initialize if script loads after DOM is ready
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initNewsLoadMore);
+} else {
+  initNewsLoadMore();
+}

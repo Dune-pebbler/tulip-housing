@@ -455,6 +455,7 @@
                                 "ddr": "Donker-roze",
                                 "dlr": "Licht-roze",
                                 "dgr": "Groen",
+                                "dlgr": "Licht-groen",
                                 "dor": "Oranje",
                                 "dwh": "Wit"
                             },
@@ -879,6 +880,24 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_68907f2dfb0bf": {
+                    "key": "layout_68907f2dfb0bf",
+                    "name": "news_archive",
+                    "label": "Nieuws archief",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6890abd622835": {
+                    "key": "layout_6890abd622835",
+                    "name": "news_snippet",
+                    "label": "Nieuws snippet",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_6887237eac153": {
                     "key": "layout_6887237eac153",
                     "name": "corevalues",
@@ -1002,5 +1021,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1754055704
+    "modified": 1754311651
 }

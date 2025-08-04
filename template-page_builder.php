@@ -78,6 +78,14 @@ get_header(); ?>
                         <?php get_template_part('template-parts/blocks/news'); ?>
                 <?php endif; ?>
 
+                <?php if (get_row_layout() === 'news_snippet'): ?>
+                        <?php get_template_part('template-parts/blocks/news_snippet'); ?>
+                <?php endif; ?>
+
+                <?php if (get_row_layout() === 'news_archive'): ?>
+                        <?php get_template_part('template-parts/blocks/news_archive'); ?>
+                <?php endif; ?>
+
                 <?php if (get_row_layout() === 'corevalues'): ?>
                         <?php get_template_part('template-parts/blocks/corevalues'); ?>
                 <?php endif; ?>
