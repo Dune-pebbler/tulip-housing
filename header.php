@@ -23,18 +23,40 @@
     <header>
       <nav>
         <div class="container-fluid">
-          <div class="row">
+          <div class="row justify-content-center">
+            <div class="logo">
+              <a href="/" title="Home">
+                <?php $header_logo = get_field('footer_logo', 'option'); ?>
+                <?php if ($header_logo): ?>
+                  <img src="<?= $header_logo['url']; ?>" alt="">
+                <?php endif; ?>
+              </a>
+            </div>
             <div class="col-6 nav-container">
-
-              <div class="logo">
-                <a href="/" title="Home">
-                  <?php $header_logo = get_field('header_logo', 'option'); ?>
-                  <?php if ($header_logo): ?>
-                    <img src="<?= $header_logo['url']; ?>" alt="">
-                  <?php endif; ?>
-                </a>
+              <div id="nav-items">
+                <div id="cross">
+                  <div class="cross-line-1"></div>
+                  <div class="cross-line-2"></div>
+                </div>
+                <div>
+                  <?php
+                  wp_nav_menu([
+                    'theme_location' => 'primary',
+                    'menu_class' => 'primary-nav',
+                  ]);
+                  ?>
+                  <div class="mobile-menu-secondary-menu">
+                    <?php
+                    wp_nav_menu([
+                      'theme_location' => 'secondary',
+                      'menu_class' => 'secondary-nav',
+                    ]);
+                    ?>
+                  </div>
+                </div>
               </div>
-
+            </div>
+            <div class="col-6 nav-container mobile-location">
               <!-- menu items -->
               <div id="nav-items">
                 <div id="cross">
@@ -43,8 +65,8 @@
                 </div>
                 <?php
                 wp_nav_menu([
-                  'theme_location' => 'primary',
-                  'menu_class' => 'primary-nav',
+                  'theme_location' => 'secondary',
+                  'menu_class' => 'secondary-nav',
                 ]);
                 ?>
               </div>
@@ -55,7 +77,6 @@
                 <div class="hamburger-line"></div>
                 <div class="hamburger-line"></div>
               </div>
-
             </div>
           </div>
         </div>

@@ -105,3 +105,18 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .services .services__cards-container .service-card {
+    &::before {
+      opacity: 1 !important; // Always visible
+    }
+
+    .service-card__title-container {
+      opacity: 1 !important; // Always visible
+    }
+
+    &:hover {
+      transform: none; // Optional: disable the hover lift effect if needed
+    }
+  }
+}

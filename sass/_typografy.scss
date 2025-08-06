@@ -43,7 +43,7 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(20px, 4vw + 1rem, 88px);
+  font-size: clamp(25px, 4vw + 1rem, 88px);
   color: black;
   margin-top: 24px;
   font-weight: 100;
@@ -94,6 +94,9 @@ ul {
     color: #363b44;
   }
 }
+ol {
+  color: black;
+}
 
 strong {
   font-weight: bold;
@@ -121,4 +124,12 @@ p + .btn {
 .btn {
   font-family: $font2;
   font-weight: 600;
+}
+a {
+  color: $color1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  &:hover {
+    color: #b5cb95;
+  }
 }

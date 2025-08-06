@@ -5,7 +5,7 @@ if ($cv_repeater): ?>
     <section class="corevalues">
         <div class="container fade-in-on-scroll">
             <div class="row">
-                <div class="offset-4 col-8">
+                <div class="col-10 offset-md-4 col-md-8">
                     <div class="corevalues__title-container">
                         <h2><?= $corevalues_title; ?></h2>
                     </div>

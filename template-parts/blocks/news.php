@@ -106,26 +106,3 @@
         </div>
     </div>
 </section>
-<script>
-    jQuery(document).ready(function ($) {
-        $('.news-carousel-desktop').owlCarousel({
-            loop: false,
-            margin: 20,
-            nav: false,
-            dots: true,
-            autoplay: true,
-            autoplayTimeout: 5000,
-            items: 1 // groups of 3 posts in one slide already handled by PHP
-        });
-
-        $('.news-carousel-mobile').owlCarousel({
-            loop: true,
-            margin: 20,
-            nav: false,
-            dots: true,
-            autoplay: true,
-            autoplayTimeout: 3000,
-            items: 1 // one post per slide
-        });
-    });
-</script>

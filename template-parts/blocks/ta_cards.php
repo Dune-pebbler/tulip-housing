@@ -55,34 +55,3 @@ $doelgroep_posts = new WP_Query(array(
         </div>
     </div>
 </section>
-
-<!-- Owl Carousel initialization script -->
-<script>
-    jQuery(document).ready(function ($) {
-        $('.ta-cards__cards-container.owl-carousel').owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: false,
-            dots: true,
-            autoplay: true,
-
-
-            items: 4, // change as needed, e.g. 3 or 4
-            responsive: {
-                0: {
-                    items: 1
-                },
-                768: {
-                    items: 2
-                },
-                1024: {
-                    items: 3,
-                },
-                1080: {
-                    items: 4,
-                    autoplay: false,
-                }
-            }
-        });
-    });
-</script>

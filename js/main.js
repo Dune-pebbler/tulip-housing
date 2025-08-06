@@ -4,11 +4,74 @@ jQuery(document).ready(function () {
   initInView(); // Call our inView initialization function
   initHeroSliderTwoCols();
   initProjectsCarousel();
+  initTaCardsCarousel();
+  initServicesCarousel();
+  initQuotesCarousel();
+  initNewsCarousels();
+  initHeaderTransparency(); // Initialize header transparency
 });
+
 jQuery(window).scroll(function () {
   // hideOnScroll();
 });
+
 jQuery(window).resize(function () {});
+
+// Header transparency control based on scroll position
+function initHeaderTransparency() {
+  const header = jQuery("header");
+  const hero = jQuery(".hero");
+
+  // Make sure elements exist
+  if (header.length === 0 || hero.length === 0) {
+    console.warn("Header or hero element not found");
+    return;
+  }
+
+  // Set initial transparent state
+  header.addClass("transparent");
+
+  // Handle scroll events with throttling for better performance
+  let ticking = false;
+
+  function updateHeader() {
+    const heroHeight = hero.outerHeight();
+    const scrollTop = jQuery(window).scrollTop();
+    const offset = 100; // Adjust this value to change when transition happens
+
+    if (scrollTop < heroHeight - offset) {
+      // Still over hero - keep transparent
+      if (!header.hasClass("transparent")) {
+        header.removeClass("visible").addClass("transparent");
+      }
+    } else {
+      // Past hero - make visible
+      if (!header.hasClass("visible")) {
+        header.removeClass("transparent").addClass("visible");
+      }
+    }
+
+    ticking = false;
+  }
+
+  function requestTick() {
+    if (!ticking) {
+      requestAnimationFrame(updateHeader);
+      ticking = true;
+    }
+  }
+
+  // Listen for scroll events
+  jQuery(window).on("scroll", requestTick);
+
+  // Handle window resize to recalculate hero height
+  jQuery(window).on("resize", function () {
+    requestTick();
+  });
+
+  // Initial check in case page loads scrolled down
+  updateHeader();
+}
 
 function setHamburgerActiveToggle() {
   jQuery(".hamburger").on("click", function () {
@@ -57,6 +120,7 @@ function startOwlSlider() {
     },
   });
 }
+
 function initProjectsCarousel() {
   jQuery(".projects-carousel").owlCarousel({
     items: 1,
@@ -83,6 +147,86 @@ function initProjectsCarousel() {
 </svg>
 `,
     ],
+  });
+}
+function initTaCardsCarousel() {
+  jQuery(".ta-cards__cards-container.owl-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    items: 4,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      768: {
+        items: 2,
+      },
+      1024: {
+        items: 3,
+      },
+      1080: {
+        items: 4,
+        autoplay: false,
+      },
+    },
+  });
+}
+function initServicesCarousel() {
+  jQuery(".services__cards-container").owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: false,
+    dots: false,
+    autoplay: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      768: {
+        items: 2,
+      },
+      992: {
+        items: 3,
+      },
+      1200: {
+        items: 4,
+      },
+    },
+  });
+}
+function initQuotesCarousel() {
+  jQuery(".quotes__content-container.owl-carousel").owlCarousel({
+    items: 1,
+    loop: true,
+    autoplay: true,
+    dots: false,
+    nav: false,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+  });
+}
+function initNewsCarousels() {
+  jQuery(".news-carousel-desktop").owlCarousel({
+    loop: false,
+    margin: 20,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    items: 1, // groups of 3 posts in one slide already handled by PHP
+  });
+
+  jQuery(".news-carousel-mobile").owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: false,
+    dots: true,
+    autoplay: false,
+    autoplayTimeout: 3000,
+    items: 1, // one post per slide
   });
 }
 
@@ -235,6 +379,7 @@ function initInView() {
     fallbackScrollAnimation();
   }
 }
+
 function initHeroSliderTwoCols() {
   const $carousel = jQuery(".hero-slider_two_cols .owl-carousel");
   const isMobile = window.innerWidth < 768;
@@ -281,6 +426,7 @@ function initHeroSliderTwoCols() {
     }, 5000);
   }
 }
+
 // News Load More Handler
 function initNewsLoadMore() {
   const loadMoreButton = document.getElementById("load-more-news");

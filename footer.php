@@ -40,7 +40,7 @@ $socials_repeater = get_field('socials', 'option');
     <div class="container-fluid">
       <div class="reference">
         <div class="row justify-content-around">
-          <div class="col-12 col-lg-2 p-0">
+          <div class="col-12 col-md-6 col-lg-4 p-0">
             <div class="footer__image-container">
               <?php if ($footer_logo): ?>
                 <a href="/home">
@@ -49,19 +49,28 @@ $socials_repeater = get_field('socials', 'option');
               <?php endif; ?>
             </div>
           </div>
-          <div class="col-12 col-lg-2">
-            <div class="content-container">
-              hier komt het footer menu
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="footer-menu">
+              <?php
+              wp_nav_menu([
+                'theme_location' => 'footer-1', // match your registered location key exactly
+                'container' => 'nav',
+                'container_class' => 'footer-menu-1',
+                'menu_class' => 'footer-menu-list',
+                'fallback_cb' => false,
+              ]);
+              ?>
             </div>
+
           </div>
-          <div class="col-12 col-lg-2">
+          <div class="col-12 col-md-6 col-lg-3">
             <?php if ($contact_info): ?>
               <div class="content-container">
                 <?= $contact_info; ?>
               </div>
             <?php endif; ?>
           </div>
-          <div class="col-12 col-lg-3">
+          <div class="col-12 col-md-6 col-lg-2">
             <div class="socials">
               <?php if (have_rows('socials', 'option')): ?>
                 <div class="socials-row" style="display: flex; gap: 20px;">
@@ -82,15 +91,26 @@ $socials_repeater = get_field('socials', 'option');
                 </div>
               <?php endif; ?>
             </div>
-
-
-
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 text-center">
+            <p id="copyright"></p>
+          </div>
+          <div class="col-6 justify-content-center">
+            <div class="dp-container">
+              <p><a href="https://dunepebbler.nl/">Website door: Dunepebbler</a></p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
   </div>
+
+
+
+
 </footer>
 <script>
   const currentYear = new Date().getFullYear();

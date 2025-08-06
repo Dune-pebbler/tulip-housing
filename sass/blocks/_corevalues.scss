@@ -3,6 +3,12 @@
   padding: 70px 0;
   background-color: $color1;
 
+  .row {
+    @media screen and (max-width: 576px) {
+      justify-content: center;
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;

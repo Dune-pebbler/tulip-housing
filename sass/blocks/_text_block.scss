@@ -11,6 +11,12 @@
 
       flex-direction: column;
       align-items: center;
+      h1 {
+        width: 100%;
+        @media screen and (max-width: 576px) {
+          text-align: left !important;
+        }
+      }
       p {
         max-width: 850px;
         font-weight: 700;
@@ -26,18 +32,58 @@
 }
 .tblg {
   background-color: #ecf4cb !important;
+  .text_block__content-container {
+    h1 {
+      width: 100%;
+      @media screen and (max-width: 576px) {
+        text-align: left !important;
+      }
+    }
+
+    p {
+      @media screen and (max-width: 576px) {
+        text-align: left !important;
+      }
+    }
+  }
 }
 .tbwh {
   background-color: white !important;
+
+  .text_block__content-container {
+    h1 {
+      width: 100%;
+      @media screen and (max-width: 576px) {
+        text-align: left !important;
+      }
+    }
+
+    p {
+      @media screen and (max-width: 576px) {
+        text-align: left !important;
+      }
+    }
+  }
 }
 .tbdr {
   background-color: $color1;
+
   .text_block__content-container {
     h1 {
       color: white !important;
+      width: 100%;
+
+      @media screen and (max-width: 576px) {
+        text-align: left !important;
+      }
     }
+
     p {
       color: white !important;
+
+      @media screen and (max-width: 576px) {
+        text-align: left !important;
+      }
     }
   }
 }

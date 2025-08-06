@@ -89,3 +89,10 @@ $gutter: 13.5px;
     color: white !important;
   }
 }
+.wpml-ls-flag {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 30px; /* adjust size */
+  height: 30px; /* adjust size */
+  object-fit: cover;
+}

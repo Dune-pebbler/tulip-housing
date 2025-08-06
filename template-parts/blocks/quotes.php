@@ -5,7 +5,7 @@ $backgroundcolor = get_sub_field('backgroundcolor');
 <section class="quotes <?= $backgroundcolor; ?>">
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <div class="col-10">
+            <div class="col-12 col-md 10">
                 <div class="quotes__content-container owl-carousel">
                     <?php if (have_rows('quotes_repeater')): ?>
                         <?php while (have_rows('quotes_repeater')):

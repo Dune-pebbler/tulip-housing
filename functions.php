@@ -42,6 +42,7 @@ set_post_thumbnail_size(128, 128, true);
 # FUNCTIONS
 register_nav_menus(array(
   'primary' => __('Primary Menu', THEME_TD),
+  'secondary' => __('secondary Menu', THEME_TD),
   'footer-1' => __('Footer 1 Menu', THEME_TD),
   'footer-2' => __('Footer 2 Menu', THEME_TD),
 ));
