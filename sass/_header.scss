@@ -289,7 +289,7 @@ header {
         color: $color1;
         font-size: 18px;
         font-family: $font2;
-        font-weight: 700;
+        font-weight: 400;
         transition: color 0.3s ease, text-shadow 0.3s ease;
 
         @media (max-width: $screen-md-max) {
@@ -330,6 +330,7 @@ header {
             display: block;
             margin: 0;
             padding: 0;
+            margin-bottom: 5px;
 
             a {
               display: block;

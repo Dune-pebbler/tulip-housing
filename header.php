@@ -43,6 +43,7 @@
                   wp_nav_menu([
                     'theme_location' => 'primary',
                     'menu_class' => 'primary-nav',
+                    'container_class' => 'menu-primary-container'
                   ]);
                   ?>
                   <div class="mobile-menu-secondary-menu">
@@ -50,6 +51,7 @@
                     wp_nav_menu([
                       'theme_location' => 'secondary',
                       'menu_class' => 'secondary-nav',
+                      'container_class' => 'menu-secondary-container'
                     ]);
                     ?>
                   </div>
@@ -67,6 +69,7 @@
                 wp_nav_menu([
                   'theme_location' => 'secondary',
                   'menu_class' => 'secondary-nav',
+                  'container_class' => 'menu-secondary-container'
                 ]);
                 ?>
               </div>

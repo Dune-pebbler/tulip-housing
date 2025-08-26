@@ -14,22 +14,26 @@
                     $news_query->the_post();
                     $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
                     ?>
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                        <div class="news-grid-item">
-                            <?php if ($image_url): ?>
-                                <div class="news-grid-image">
-                                    <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>"
-                                        class="img-fluid">
-                                </div>
-                            <?php endif; ?>
-                            <div class="news-grid-content">
-                                <h3><?php the_title(); ?></h3>
-                                <p><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
-                                <a href="<?php the_permalink(); ?>" class="btn news-grid-button">Lees verder</a>
-                            </div>
-                        </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="news-grid-item">
+                    <?php if ($image_url): ?>
+                    <div class="news-grid-image">
+                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>"
+                            class="img-fluid">
                     </div>
-                    <?php
+                    <?php endif; ?>
+                    <div class="news-grid-content">
+                        <h3><?php the_title(); ?></h3>
+                        <p><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
+                        <?php $lang = isset($_GET['lang']) ? strtolower($_GET['lang']) : ''; ?>
+                        <a href="<?php the_permalink(); ?>" class="btn news-grid-button">
+                            <?php echo ($lang === 'en' ? 'Read more' : 'Lees verder'); ?>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <?php
                 endwhile;
                 wp_reset_postdata();
             endif;
@@ -41,16 +45,18 @@
         $total_posts = wp_count_posts('post')->publish;
         if ($total_posts > 9):
             ?>
-            <div class="row">
-                <div class="col-12 text-center">
-                    <div class="btn__container">
-                        <button id="load-more-news" class="btn news-load-more-btn" data-page="2"
-                            data-total="<?php echo $total_posts; ?>">
-                            Zie meer
-                        </button>
-                    </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="btn__container">
+                    <?php $lang = isset($_GET['lang']) ? strtolower($_GET['lang']) : ''; ?>
+                    <button id="load-more-news" class="btn news-load-more-btn" data-page="2"
+                        data-total="<?php echo $total_posts; ?>">
+                        <?php echo ($lang === 'en' ? 'See more' : 'Zie meer'); ?>
+                    </button>
+
                 </div>
             </div>
+        </div>
         <?php endif; ?>
     </div>
 </section>

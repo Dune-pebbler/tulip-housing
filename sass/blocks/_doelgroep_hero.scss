@@ -12,10 +12,11 @@
     height: 100%;
     h1 {
       color: black;
-      font-size: clamp(2rem, 8vw, 7rem);
+      text-transform: uppercase;
       position: relative;
       z-index: 2;
       max-width: 900px;
+      font-weight: 700;
     }
     p {
       max-width: 550px;

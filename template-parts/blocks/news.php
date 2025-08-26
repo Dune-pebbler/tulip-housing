@@ -2,7 +2,16 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>Nieuws</h2>
+                <?php
+                $lang = isset($_GET['lang']) ? $_GET['lang'] : '';
+
+                if ($lang === 'en') {
+                    echo '<h2>News</h2>';
+                } else {
+                    echo '<h2>Nieuws</h2>';
+                }
+                ?>
+
             </div>
         </div>
 
@@ -26,32 +35,40 @@
                                 echo '<div class="item"><div class="row">';
                                 echo '<div class="col-md-6">';
                                 ?>
-                                <div class="news-item big-post">
-                                    <?php if ($image_url): ?>
-                                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>"
-                                            class="img-fluid">
-                                    <?php endif; ?>
-                                    <div class="big-post__content-container">
-                                        <h3><?php the_title(); ?></h3>
-                                        <p><?php echo wp_trim_words(get_the_excerpt(), 30); ?></p>
-                                        <a href="<?php the_permalink(); ?>" class="btn news-button">Lees verder</a>
-                                    </div>
-                                </div>
-                                <?php
+                    <div class="news-item big-post">
+                        <?php if ($image_url): ?>
+                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>"
+                            class="img-fluid">
+                        <?php endif; ?>
+                        <div class="big-post__content-container">
+                            <h3><?php the_title(); ?></h3>
+                            <p><?php echo wp_trim_words(get_the_excerpt(), 30); ?></p>
+                            <?php $lang = isset($_GET['lang']) ? strtolower($_GET['lang']) : ''; ?>
+                            <a href="<?php the_permalink(); ?>" class="btn news-button">
+                                <?php echo ($lang === 'en' ? 'Read more' : 'Lees verder'); ?>
+                            </a>
+
+                        </div>
+                    </div>
+                    <?php
                                 echo '</div>'; // close col-md-6
                                 echo '<div class="col-md-6 d-flex flex-column justify-content-between">';
                             } else {
                                 ?>
-                                <div class="news-item small-post">
-                                    <?php if ($image_url): ?>
-                                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>"
-                                            class="img-fluid">
-                                    <?php endif; ?>
-                                    <h3><?php the_title(); ?></h3>
-                                    <p><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
-                                    <a href="<?php the_permalink(); ?>" class="btn news-button">Lees verder</a>
-                                </div>
-                                <?php
+                    <div class="news-item small-post">
+                        <?php if ($image_url): ?>
+                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>"
+                            class="img-fluid">
+                        <?php endif; ?>
+                        <h3><?php the_title(); ?></h3>
+                        <p><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
+                        <?php $lang = isset($_GET['lang']) ? strtolower($_GET['lang']) : ''; ?>
+                        <a href="<?php the_permalink(); ?>" class="btn news-button">
+                            <?php echo ($lang === 'en' ? 'Read more' : 'Lees verder'); ?>
+                        </a>
+
+                    </div>
+                    <?php
                             }
 
                             if ($count % 3 == 0) {
@@ -85,18 +102,22 @@
                             $news_query->the_post();
                             $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
                             ?>
-                            <div class="item">
-                                <div class="news-item">
-                                    <?php if ($image_url): ?>
-                                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>"
-                                            class="img-fluid">
-                                    <?php endif; ?>
-                                    <h3><?php the_title(); ?></h3>
-                                    <p><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
-                                    <a href="<?php the_permalink(); ?>" class="btn news-button">Lees verder</a>
-                                </div>
-                            </div>
-                            <?php
+                    <div class="item">
+                        <div class="news-item">
+                            <?php if ($image_url): ?>
+                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>"
+                                class="img-fluid">
+                            <?php endif; ?>
+                            <h3><?php the_title(); ?></h3>
+                            <p><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
+                            <?php $lang = isset($_GET['lang']) ? strtolower($_GET['lang']) : ''; ?>
+                            <a href="<?php the_permalink(); ?>" class="btn news-button">
+                                <?php echo ($lang === 'en' ? 'Read more' : 'Lees verder'); ?>
+                            </a>
+
+                        </div>
+                    </div>
+                    <?php
                         endwhile;
                         wp_reset_postdata();
                     endif;

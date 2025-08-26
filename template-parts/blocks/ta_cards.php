@@ -1,16 +1,30 @@
 <?php
 $ta_text = get_sub_field('ta_text_block');
 
-// Query posts with meta key "doelgroep"
-$current_id = get_the_ID();
+// --- START: MODIFICATIONS ---
 
-$doelgroep_posts = new WP_Query(array(
+// The arguments for our query
+$args = array(
     'post_type' => 'doelgroep',
     'posts_per_page' => 4,
     'orderby' => 'date',
     'order' => 'ASC',
-));
+);
 
+// Check if we are on a single 'doelgroep' post page.
+// If so, exclude the current post ID from the query.
+if (is_singular('doelgroep')) {
+    $current_id = get_the_ID();
+    $args['post__not_in'] = array($current_id);
+}
+
+$doelgroep_posts = new WP_Query($args);
+
+// Get the number of posts that were actually found.
+// This will be 4 on other pages and 3 on a 'doelgroep' page.
+$post_count = $doelgroep_posts->post_count;
+
+// --- END: MODIFICATIONS ---
 ?>
 <section class="ta-cards">
     <div class="container">
@@ -21,8 +35,7 @@ $doelgroep_posts = new WP_Query(array(
                 </div>
             </div>
             <div class="col-12">
-                <!-- Add owl-carousel class here -->
-                <div class="ta-cards__cards-container owl-carousel stagger-on-scroll">
+                <div class="ta-cards__cards-container owl-carousel stagger-on-scroll" data-items="<?= $post_count; ?>">
                     <?php
                     $index = 1;
                     if ($doelgroep_posts->have_posts()):

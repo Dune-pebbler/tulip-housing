@@ -9,6 +9,7 @@ jQuery(document).ready(function () {
   initQuotesCarousel();
   initNewsCarousels();
   initHeaderTransparency(); // Initialize header transparency
+  initDynamicHeaderBackgrounds(".doelgroep_text_image", "h2", 20);
 });
 
 jQuery(window).scroll(function () {
@@ -150,29 +151,40 @@ function initProjectsCarousel() {
   });
 }
 function initTaCardsCarousel() {
-  jQuery(".ta-cards__cards-container.owl-carousel").owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: false,
-    dots: true,
-    autoplay: true,
-    items: 4,
-    responsive: {
-      0: {
-        items: 1,
+  // Get the carousel container
+  var $carousel = jQuery(".ta-cards__cards-container.owl-carousel");
+
+  // Only run if the carousel exists on the page
+  if ($carousel.length > 0) {
+    // Read the item count from our new data-items attribute, defaulting to 4
+    var itemCount = $carousel.data("items") || 4;
+
+    $carousel.owlCarousel({
+      loop: itemCount > 3, // Only loop if there are enough items to make it worthwhile
+      margin: 10,
+      nav: false,
+      dots: true,
+      autoplay: true,
+      items: 4, // Default items, will be overridden by responsive settings
+      responsive: {
+        0: {
+          items: 1,
+        },
+        768: {
+          items: 2,
+        },
+        1024: {
+          // Show a maximum of 3 items, or fewer if that's all we have
+          items: Math.min(itemCount, 3),
+        },
+        1080: {
+          // Use our dynamic item count for the largest breakpoint
+          items: itemCount,
+          autoplay: false,
+        },
       },
-      768: {
-        items: 2,
-      },
-      1024: {
-        items: 3,
-      },
-      1080: {
-        items: 4,
-        autoplay: false,
-      },
-    },
-  });
+    });
+  }
 }
 function initServicesCarousel() {
   jQuery(".services__cards-container").owlCarousel({
@@ -180,7 +192,7 @@ function initServicesCarousel() {
     margin: 20,
     nav: false,
     dots: false,
-    autoplay: true,
+    autoplay: false,
     responsive: {
       0: {
         items: 1,
@@ -576,4 +588,51 @@ if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initNewsLoadMore);
 } else {
   initNewsLoadMore();
+}
+function initDynamicHeaderBackgrounds(
+  sectionSelector,
+  targetSelector,
+  padding = 20
+) {
+  // Find all the sections that match the selector
+  const sections = document.querySelectorAll(sectionSelector);
+
+  // If no sections are found on the page, do nothing.
+  if (!sections.length) {
+    return;
+  }
+
+  // This helper function performs the actual calculation and style update
+  const setBackgroundHeight = (section) => {
+    const targetElement = section.querySelector(targetSelector);
+
+    // Make sure the target element (like the h2) exists inside the section
+    if (targetElement) {
+      const targetRect = targetElement.getBoundingClientRect();
+      const sectionRect = section.getBoundingClientRect();
+
+      // Calculate the required height plus padding
+      const requiredHeight = targetRect.bottom - sectionRect.top + padding;
+
+      // Set the CSS custom property on the section
+      section.style.setProperty("--before-height", `${requiredHeight}px`);
+    }
+  };
+
+  // Process each section found on the page
+  sections.forEach((section) => {
+    // Run once on initial load
+    setBackgroundHeight(section);
+
+    // Create an observer to watch for size changes in the target element
+    const observer = new ResizeObserver(() => {
+      setBackgroundHeight(section);
+    });
+
+    // Start observing the target element
+    const elementToObserve = section.querySelector(targetSelector);
+    if (elementToObserve) {
+      observer.observe(elementToObserve);
+    }
+  });
 }

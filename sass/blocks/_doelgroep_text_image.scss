@@ -1,116 +1,109 @@
 .doelgroep_text_image {
-  overflow: hidden;
+  // --- Main Section Styles ---
+  // The section is the positioning context for the ::before element.
   position: relative;
-  padding: 50px 0px;
-  .reverse {
-    text-align: right;
+  overflow: hidden;
+  padding: 50px 0;
+
+  // --- Dynamic Background Shape ---
+  // Attached directly to the section for a full-width background.
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0; // Sits behind the container but above the section's own default background.
+
+    // This height is controlled by the JavaScript solution.
+    // 150px is a fallback in case the script is delayed or fails.
+    height: var(--before-height, 150px);
   }
-  .text_with_image__image-container {
-    img {
-      border-radius: 20px;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+
+  // The container needs a higher z-index to ensure all content
+  // (text, images) appears on top of the ::before background.
+  .container {
+    position: relative;
+    z-index: 1;
   }
-  .text_with_image__text-container-container {
-    .text_with_image__text-container {
-      display: block;
-      width: 100%;
-      h2 {
-        width: 100%;
-        display: block;
-      }
-    }
-    @media screen and (max-width: 1024px) {
-      p {
-        font-size: 16px;
-      }
-    }
-  }
-  //different color styles for the before
-  .ddr {
+
+  // --- Color Theme Variations ---
+  // Each class modifies the section's ::before background and the h2 color.
+  &.ddr {
+    &::before {
+      background-color: #b50d43;
+    } // A light pink to match
     h2 {
       color: #ed8895;
     }
-    &::before {
-      content: " ";
-      width: 100%;
-      height: 25%;
-      position: absolute;
-      top: 0%;
-      left: 0%;
-      background-color: $color1;
-    }
   }
-  .dlr {
+  &.dlr {
+    &::before {
+      background-color: #ed8895;
+    }
     h2 {
       color: #b50d43;
     }
-    &::before {
-      content: " ";
-      width: 100%;
-      height: 25%;
-      position: absolute;
-      top: 0%;
-      left: 0%;
-      background-color: #ed8895;
-    }
   }
-  .dgr {
+  &.dgr {
+    &::before {
+      background-color: #b5cb95;
+    }
     h2 {
       color: #e3f4cb;
     }
-    &::before {
-      content: " ";
-      width: 100%;
-      height: 25%;
-      position: absolute;
-      top: 0%;
-      left: 0%;
-      background-color: #b5cb95;
-    }
   }
-  .dlgr {
+  &.dlgr {
+    &::before {
+      background-color: #ecf4cb;
+    }
     h2 {
       color: #9cac77;
     }
-    &::before {
-      content: " ";
-      width: 100%;
-      height: 25%;
-      position: absolute;
-      top: 0%;
-      left: 0%;
-      background-color: #ecf4cb;
-    }
   }
-  .dor {
+  &.dor {
+    &::before {
+      background-color: #fba48b;
+    }
     h2 {
       color: #fc5a2c;
     }
-    &::before {
-      content: " ";
-      width: 100%;
-      height: 25%;
-      position: absolute;
-      top: 0%;
-      left: 0%;
-      background-color: #fba48b;
-    }
   }
-  .dwh {
+  &.dwh {
+    &::before {
+      background-color: white;
+    }
     h2 {
       color: black;
     }
-    &::before {
-      content: " ";
-      width: 100%;
-      height: 25%;
-      position: absolute;
-      top: 0%;
-      left: 0%;
-      background-color: white;
+  }
+
+  // --- Layout & Content Styles ---
+  .row.reverse {
+    text-align: right;
+    .text_with_image__text-container-container {
+      justify-content: start;
+    }
+  }
+
+  .text_with_image__image-container img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .text_with_image__text-container-container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    min-height: 100%; // Ensures the container fills the column height
+  }
+
+  .text_with_image__text-container {
+    width: 100%;
+    h2 {
+      margin-top: 0;
     }
   }
 }

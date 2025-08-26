@@ -25,7 +25,7 @@ footer {
         display: flex;
         flex-direction: column; // stack icon + text
         align-items: center; // center them horizontally
-        justify-content: center;
+        justify-content: start;
         text-align: center;
         p {
           a {
@@ -148,4 +148,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#menu-footer-menu {
+  margin-top: 0px;
 }
