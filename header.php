@@ -22,7 +22,7 @@
   <div class="header-wrapper">
     <header>
       <nav>
-        <div class="container-fluid">
+        <div class="container">
           <div class="row justify-content-center">
             <div class="logo">
               <a href="/" title="Home">
@@ -33,7 +33,7 @@
               </a>
             </div>
             <div class="col-6 nav-container">
-              <div id="nav-items">
+              <div class="nav-items">
                 <div id="cross">
                   <div class="cross-line-1"></div>
                   <div class="cross-line-2"></div>
@@ -60,7 +60,7 @@
             </div>
             <div class="col-6 nav-container mobile-location">
               <!-- menu items -->
-              <div id="nav-items">
+              <div class="nav-items">
                 <div id="cross">
                   <div class="cross-line-1"></div>
                   <div class="cross-line-2"></div>

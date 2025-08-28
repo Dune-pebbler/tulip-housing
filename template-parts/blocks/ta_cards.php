@@ -11,17 +11,18 @@ $args = array(
     'order' => 'ASC',
 );
 
-// Check if we are on a single 'doelgroep' post page.
-// If so, exclude the current post ID from the query.
+// Determine the container class and query args based on the page type
 if (is_singular('doelgroep')) {
+    // We are on a single 'doelgroep' page
     $current_id = get_the_ID();
     $args['post__not_in'] = array($current_id);
+    $container_class = 'static-grid'; // Use this class for the static grid layout
+} else {
+    // We are on any other page
+    $container_class = 'owl-carousel'; // Use this class to initialize the carousel
 }
 
 $doelgroep_posts = new WP_Query($args);
-
-// Get the number of posts that were actually found.
-// This will be 4 on other pages and 3 on a 'doelgroep' page.
 $post_count = $doelgroep_posts->post_count;
 
 // --- END: MODIFICATIONS ---
@@ -35,7 +36,8 @@ $post_count = $doelgroep_posts->post_count;
                 </div>
             </div>
             <div class="col-12">
-                <div class="ta-cards__cards-container owl-carousel stagger-on-scroll" data-items="<?= $post_count; ?>">
+                <div class="ta-cards__cards-container <?= esc_attr($container_class); ?> stagger-on-scroll"
+                    data-items="<?= $post_count; ?>">
                     <?php
                     $index = 1;
                     if ($doelgroep_posts->have_posts()):

@@ -35,40 +35,40 @@
                                 echo '<div class="item"><div class="row">';
                                 echo '<div class="col-md-6">';
                                 ?>
-                    <div class="news-item big-post">
-                        <?php if ($image_url): ?>
-                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>"
-                            class="img-fluid">
-                        <?php endif; ?>
-                        <div class="big-post__content-container">
-                            <h3><?php the_title(); ?></h3>
-                            <p><?php echo wp_trim_words(get_the_excerpt(), 30); ?></p>
-                            <?php $lang = isset($_GET['lang']) ? strtolower($_GET['lang']) : ''; ?>
-                            <a href="<?php the_permalink(); ?>" class="btn news-button">
-                                <?php echo ($lang === 'en' ? 'Read more' : 'Lees verder'); ?>
-                            </a>
+                                <div class="news-item big-post">
+                                    <?php if ($image_url): ?>
+                                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>"
+                                            class="img-fluid">
+                                    <?php endif; ?>
+                                    <div class="big-post__content-container">
+                                        <h3><?php the_title(); ?></h3>
+                                        <p><?php echo wp_trim_words(get_the_excerpt(), 30); ?></p>
+                                        <?php $lang = isset($_GET['lang']) ? strtolower($_GET['lang']) : ''; ?>
+                                        <a href="<?php the_permalink(); ?>" class="btn news-button">
+                                            <?php echo ($lang === 'en' ? 'Read more' : 'Lees verder'); ?>
+                                        </a>
 
-                        </div>
-                    </div>
-                    <?php
+                                    </div>
+                                </div>
+                                <?php
                                 echo '</div>'; // close col-md-6
                                 echo '<div class="col-md-6 d-flex flex-column justify-content-between">';
                             } else {
                                 ?>
-                    <div class="news-item small-post">
-                        <?php if ($image_url): ?>
-                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>"
-                            class="img-fluid">
-                        <?php endif; ?>
-                        <h3><?php the_title(); ?></h3>
-                        <p><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
-                        <?php $lang = isset($_GET['lang']) ? strtolower($_GET['lang']) : ''; ?>
-                        <a href="<?php the_permalink(); ?>" class="btn news-button">
-                            <?php echo ($lang === 'en' ? 'Read more' : 'Lees verder'); ?>
-                        </a>
+                                <div class="news-item small-post">
+                                    <?php if ($image_url): ?>
+                                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>"
+                                            class="img-fluid">
+                                    <?php endif; ?>
+                                    <h3><?php the_title(); ?></h3>
+                                    <p><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
+                                    <?php $lang = isset($_GET['lang']) ? strtolower($_GET['lang']) : ''; ?>
+                                    <a href="<?php the_permalink(); ?>" class="btn news-button">
+                                        <?php echo ($lang === 'en' ? 'Read more' : 'Lees verder'); ?>
+                                    </a>
 
-                    </div>
-                    <?php
+                                </div>
+                                <?php
                             }
 
                             if ($count % 3 == 0) {
@@ -87,6 +87,17 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="btn__container">
+                    <?php $lang = isset($_GET['lang']) ? strtolower($_GET['lang']) : ''; ?>
+                    <a href="<?php echo ($lang === 'en' ? '/en/news' : '/nieuws'); ?>" class="btn news-load-more-btn">
+                        <?php echo ($lang === 'en' ? 'View all news' : 'Bekijk alle nieuwsberichten'); ?>
+                    </a>
+
+                </div>
+            </div>
+        </div>
 
         <!-- Mobile individual slider -->
         <div class="row d-md-none">
@@ -102,22 +113,22 @@
                             $news_query->the_post();
                             $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
                             ?>
-                    <div class="item">
-                        <div class="news-item">
-                            <?php if ($image_url): ?>
-                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>"
-                                class="img-fluid">
-                            <?php endif; ?>
-                            <h3><?php the_title(); ?></h3>
-                            <p><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
-                            <?php $lang = isset($_GET['lang']) ? strtolower($_GET['lang']) : ''; ?>
-                            <a href="<?php the_permalink(); ?>" class="btn news-button">
-                                <?php echo ($lang === 'en' ? 'Read more' : 'Lees verder'); ?>
-                            </a>
+                            <div class="item">
+                                <div class="news-item">
+                                    <?php if ($image_url): ?>
+                                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>"
+                                            class="img-fluid">
+                                    <?php endif; ?>
+                                    <h3><?php the_title(); ?></h3>
+                                    <p><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
+                                    <?php $lang = isset($_GET['lang']) ? strtolower($_GET['lang']) : ''; ?>
+                                    <a href="<?php the_permalink(); ?>" class="btn news-button">
+                                        <?php echo ($lang === 'en' ? 'Read more' : 'Lees verder'); ?>
+                                    </a>
 
-                        </div>
-                    </div>
-                    <?php
+                                </div>
+                            </div>
+                            <?php
                         endwhile;
                         wp_reset_postdata();
                     endif;

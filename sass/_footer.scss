@@ -9,9 +9,25 @@ footer {
     overflow: hidden;
   }
   .footer-banner {
-    background: #fadcdf;
     padding: 50px 0px;
+    position: relative;
+    overflow: hidden;
+    .footer-banner-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
     &__content-container {
+      position: relative;
+      z-index: 2;
       .footer-items {
         display: flex;
         justify-content: space-evenly; // spread them evenly
@@ -28,11 +44,14 @@ footer {
         justify-content: start;
         text-align: center;
         p {
+          color: $color1 !important;
+          font-weight: 700;
           a {
             transition: all 0.3s ease;
+            color: $color1 !important;
           }
           a:hover {
-            color: $color1 !important;
+            color: $color2 !important;
           }
         }
       }
@@ -127,21 +146,25 @@ footer {
     font-family: $font2;
     font-weight: 700;
     padding: 0px;
+
     @media screen and (max-width: 576px) {
       padding-left: 20px;
     }
+    li {
+      margin-bottom: 5px !important;
+      a {
+        color: black;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 18px;
 
-    list-style-type: none;
-    a {
-      color: black;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      font-size: 20px;
-
-      &:hover {
-        color: $color1;
+        &:hover {
+          color: $color1;
+        }
       }
     }
+
+    list-style-type: none;
   }
 }
 .dp-container {

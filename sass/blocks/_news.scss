@@ -145,3 +145,18 @@
     }
   }
 }
+.btn__container {
+  margin-top: 48px;
+  a {
+    background-color: $color1;
+    color: white;
+    border-radius: 20px;
+    &:hover {
+      background-color: #9cac77;
+      color: white;
+    }
+  }
+}
+.news-grid {
+  padding-bottom: 45px;
+}

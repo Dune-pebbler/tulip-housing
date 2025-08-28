@@ -1,155 +1,272 @@
-.news-grid {
+//==========================================================================
+// News Archive Styles
+//==========================================================================
+
+//--- Variables ---//
+// Colors
+$color-primary: #a7bc7e; // A primary green for buttons and accents
+$color-primary-dark: #9cac77; // A darker shade for hover states
+$card-background: #f6fbe8; // The background for all news cards
+$button-background: #e7f8d1; // Background for the smaller 'Read More' buttons
+$text-color-dark: #333;
+$text-color-light: #666;
+$white-color: #fff;
+
+// Layout & Effects
+$card-border-radius: 12px;
+$button-border-radius: 50px;
+$transition: all 0.3s ease;
+$card-hover-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+$button-hover-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+
+//==========================================================================
+// Main Container
+//==========================================================================
+
+.news-archive-page {
   padding: 3rem 0;
-
-  h2 {
-    margin-bottom: 2rem;
-  }
-
-  .news-grid-item {
-    background: #f6fbe8;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    .news-grid-image {
-      width: 100%;
-      overflow: hidden;
-
-      img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-      }
-
-      &:hover img {
-        transform: scale(1.05);
-      }
-    }
-
-    .news-grid-content {
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-
-      h3 {
-        color: black;
-        margin-bottom: 0.75rem;
-        font-size: 1.25rem;
-        line-height: 1.4;
-        font-weight: 600;
-      }
-
-      p {
-        color: #666;
-        margin-bottom: 1.5rem;
-        flex-grow: 1;
-        line-height: 1.6;
-      }
-
-      .news-grid-button {
-        align-self: flex-start;
-        padding: 0.5rem 1.25rem;
-        border-radius: 50px;
-        background: #e7f8d1;
-        color: #333;
-        font-weight: 600;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        border: none;
-        font-size: 0.9rem;
-
-        &:hover {
-          background: white;
-          transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-          color: #9cac77;
-          text-decoration: none;
-        }
-      }
-    }
-  }
-  .btn__container {
-    display: flex;
-    justify-content: center;
-    .news-load-more-btn {
-      padding: 0.75rem 2rem;
-      border-radius: 50px;
-      background: $color1;
-      color: white;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      border: none;
-      font-size: 1rem;
-      margin-top: 2rem;
-
-      &:hover:not(:disabled) {
-        background: #d6f2b9;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        color: #333;
-      }
-
-      &:disabled {
-        opacity: 0.6;
-        cursor: not-allowed;
-      }
-    }
-  }
-
-  // Responsive adjustments
-  @media (max-width: 991.98px) {
-    .news-grid-item {
-      .news-grid-image img {
-        height: 200px;
-      }
-    }
-  }
 
   @media (max-width: 767.98px) {
     padding: 2rem 0;
+  }
+}
 
-    .news-grid-item {
-      margin-bottom: 1.5rem;
+//==========================================================================
+// Base News Card Style
+//==========================================================================
 
-      .news-grid-image img {
-        height: 250px;
-      }
+.news-grid-item {
+  background: $card-background;
+  border-radius: $card-border-radius;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  transition: $transition;
 
-      .news-grid-content {
-        padding: 1.25rem;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $card-hover-shadow;
+  }
 
-        h3 {
-          font-size: 1.1rem;
-        }
-      }
-    }
+  // --- Image Container --- //
+  .news-grid-image {
+    width: 100%;
+    overflow: hidden;
 
-    .news-load-more-btn {
-      padding: 0.625rem 1.5rem;
-      font-size: 0.9rem;
+    img {
+      width: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
     }
   }
 
-  @media (max-width: 575.98px) {
-    .news-grid-item {
+  &:hover .news-grid-image img {
+    transform: scale(1.05);
+  }
+
+  // --- Content Container --- //
+  .news-grid-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    h3 {
+      color: $text-color-dark;
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+
+    p {
+      color: $text-color-light;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+      line-height: 1.6;
+    }
+
+    .news-grid-button {
+      align-self: flex-start;
+      padding: 0.5rem 1.25rem;
+      border-radius: $button-border-radius;
+      background: $button-background;
+      color: $text-color-dark;
+      font-weight: 600;
+      text-decoration: none;
+      transition: $transition;
+      border: none;
+      font-size: 0.9rem;
+
+      &:hover {
+        background: $white-color;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        color: $color-primary-dark;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+//==========================================================================
+// Featured Section Specific Styles (Desktop & Tablet)
+//==========================================================================
+
+.featured-news {
+  // --- Large post on the left --- //
+  .featured-large {
+    .news-grid-image img {
+      height: 280px;
+    }
+    .news-grid-content h3 {
+      font-size: 1.6rem;
+    }
+    @media (max-width: 991.98px) {
+      .news-grid-image img {
+        height: 240px;
+      }
+    }
+  }
+
+  // --- Container for the two stacked posts --- //
+  .featured-stacked {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 1.5rem;
+  }
+
+  // --- Smaller stacked posts on the right --- //
+  .featured-small {
+    flex: 1;
+    flex-direction: row;
+
+    .news-grid-image {
+      width: 50%;
+      flex-shrink: 0;
+      img {
+        height: 100%;
+      }
+    }
+    .news-grid-content {
+      width: 50%;
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+      }
+    }
+    @media (max-width: 991.98px) {
+      flex-direction: column;
+      .news-grid-image,
+      .news-grid-content {
+        width: 100%;
+      }
+      .news-grid-image img {
+        height: 180px;
+      }
+    }
+  }
+}
+
+//==========================================================================
+// Main Grid Specific Styles (Desktop & Tablet)
+//==========================================================================
+
+#news-grid-container {
+  .news-grid-item {
+    .news-grid-image img {
+      height: 220px;
+    }
+    @media (max-width: 991.98px) {
       .news-grid-image img {
         height: 200px;
       }
+    }
+  }
+}
 
-      .news-grid-content {
-        padding: 1rem;
+//==========================================================================
+// Mobile Unification Styles
+//==========================================================================
+
+@media (max-width: 767.98px) {
+  // --- Apply a single, unified style to ALL news cards on mobile --- //
+  .news-grid-item {
+    margin-bottom: 1.5rem;
+
+    // --- Unify image height --- //
+    .news-grid-image img {
+      height: 220px !important; // Use !important to override more specific rules
+    }
+
+    // --- Unify content styles --- //
+    .news-grid-content {
+      padding: 1.25rem;
+      h3 {
+        font-size: 1.1rem !important;
+      }
+      p {
+        font-size: 1rem !important; // Reset any smaller font sizes
       }
     }
+  }
+
+  // --- Reset featured card specific layouts --- //
+  .featured-small {
+    flex-direction: column !important;
+    .news-grid-image,
+    .news-grid-content {
+      width: 100% !important;
+    }
+  }
+
+  .featured-stacked {
+    gap: 1rem;
+  }
+}
+
+//==========================================================================
+// Infinite Scroll Trigger & Loader
+//==========================================================================
+
+// Keyframes for the spinner animation
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// The container for our loader, which is observed by the JavaScript
+#infinite-scroll-trigger {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+
+  // The loader/spinner element itself
+  .loader {
+    // Hidden by default
+    display: none;
+
+    // Spinner styles using your theme's colors
+    border: 5px solid rgba($color-primary, 0.2); // A lighter shade of the primary color
+    border-top-color: $color-primary; // Use your primary color for the active part
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+
+  // This class is added by JS to show the loader when fetching posts
+  &.loading .loader {
+    display: block;
   }
 }

@@ -14,6 +14,8 @@
 
       h1 {
         width: 100%;
+        font-size: 60px;
+        text-transform: uppercase;
         @media screen and (max-width: 576px) {
           text-align: left !important;
         }
@@ -82,6 +84,31 @@
     p {
       color: white !important;
 
+      @media screen and (max-width: 576px) {
+        text-align: left !important;
+      }
+    }
+  }
+}
+.tbdr {
+  background-color: $color1;
+
+  // Target h1 and p tags directly inside any element with the .tbdr class
+  h1,
+  p {
+    color: white !important;
+  }
+
+  // You can keep your media queries, but they should also be updated if needed
+  .text_block__content-container {
+    // This block can be removed or updated
+    h1 {
+      width: 100%;
+      @media screen and (max-width: 576px) {
+        text-align: left !important;
+      }
+    }
+    p {
       @media screen and (max-width: 576px) {
         text-align: left !important;
       }

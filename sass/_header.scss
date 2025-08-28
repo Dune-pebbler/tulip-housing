@@ -39,6 +39,7 @@ header {
     .menu-secondary-container {
       a {
         color: $color1;
+        font-weight: 700;
 
         &:hover {
           color: rgba(255, 255, 255, 0.8);
@@ -82,6 +83,7 @@ header {
       a {
         color: $color1;
         text-shadow: none;
+        font-weight: 700 !important;
 
         &:hover {
           color: $color1;
@@ -125,7 +127,7 @@ header {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-150%, -50%);
+  transform: translate(-200%, -50%);
   padding: 0 12px;
   z-index: 100;
 
@@ -171,17 +173,24 @@ header {
 // NAVIGATION ITEMS
 // ================================
 
-#nav-items {
+// Use a class selector for nav-items
+.nav-items {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; // Default alignment for desktop
   padding: 25px 0;
   width: 100%;
   height: 100%;
   font-family: $font2;
 
+  // For desktop, target the second direct child to push it to the right.
+  // This assumes the primary nav is child 1 and secondary is child 2.
+  > .menu-secondary-container {
+    margin-left: auto;
+  }
+
   @media (max-width: $screen-md-max) {
-    display: flex;
+    // Mobile styles
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -196,6 +205,12 @@ header {
     transition: transform 0.3s ease;
     padding: 32px 32px 104px;
     gap: 0;
+
+    // On mobile, target the secondary menu wrapper to push it to the bottom.
+    > .mobile-menu-secondary-menu {
+      margin-top: auto;
+      padding-right: 12px;
+    }
   }
 
   &.is-active {
@@ -205,7 +220,6 @@ header {
   // ================================
   // MOBILE CROSS BUTTON
   // ================================
-
   #cross {
     display: none;
 
@@ -215,6 +229,7 @@ header {
       align-items: flex-end;
       width: 100%;
       cursor: pointer;
+      margin-bottom: 24px; // Add some space below the cross
 
       .cross-line-1,
       .cross-line-2 {
@@ -237,12 +252,12 @@ header {
   // ================================
   // SECONDARY MENU ON MOBILE
   // ================================
-
   .mobile-menu-secondary-menu {
-    display: none;
+    display: none; // Hide by default on desktop
 
-    @media screen and (max-width: 768px) {
-      display: block;
+    @media (max-width: $screen-md-max) {
+      display: block; // Show on mobile
+      width: 100%; // Ensure it takes full width
     }
   }
 }
@@ -250,7 +265,12 @@ header {
 // ================================
 // MENU CONTAINERS (PRIMARY & SECONDARY)
 // ================================
-
+.menu-primary-container {
+  padding-left: 12px;
+}
+.menu-secondary-container {
+  padding-right: 12px;
+}
 .menu-primary-container,
 .menu-secondary-container {
   height: 100%;
@@ -262,11 +282,11 @@ header {
   ul {
     height: 100%;
     display: flex;
-    gap: 2em;
+    gap: 3em;
     padding: 0;
     list-style: none;
     margin: 0;
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1200px) {
       gap: 1rem;
     }
 
@@ -289,8 +309,11 @@ header {
         color: $color1;
         font-size: 18px;
         font-family: $font2;
-        font-weight: 400;
+        font-weight: 700;
         transition: color 0.3s ease, text-shadow 0.3s ease;
+        &:hover {
+          color: #ffaa86 !important;
+        }
 
         @media (max-width: $screen-md-max) {
           font-size: 20px;
@@ -339,6 +362,7 @@ header {
               text-decoration: none;
               background-color: white;
               white-space: nowrap;
+              font-weight: 400 !important;
 
               &:hover {
                 color: #ffaa86;

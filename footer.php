@@ -9,6 +9,9 @@ $socials_repeater = get_field('socials', 'option');
 ?>
 <footer>
   <section class="footer-banner">
+    <div class="footer-banner-background">
+      <img src="<?= get_template_directory_uri(); ?>/images/pink-gradient.png" alt="<?= esc_attr($logo['alt']); ?>">
+    </div>
     <div class="container">
       <div class="row d-flex justify-content-center">
         <div class="col-12">
