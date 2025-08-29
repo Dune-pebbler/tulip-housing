@@ -159,8 +159,8 @@
   justify-content: center;
 }
 
-// Stagger effect for the carousel
-.owl-carousel .active:nth-child(even) {
+// Stagger effect for THIS specific carousel
+.ta-cards .owl-carousel .active:nth-child(even) {
   padding-top: 50px;
   @media screen and (max-width: 576px) {
     padding-top: 0px;

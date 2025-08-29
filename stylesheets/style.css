@@ -1864,11 +1864,11 @@ a:hover {
   justify-content: center;
 }
 
-.owl-carousel .active:nth-child(even) {
+.ta-cards .owl-carousel .active:nth-child(even) {
   padding-top: 50px;
 }
 @media screen and (max-width: 576px) {
-  .owl-carousel .active:nth-child(even) {
+  .ta-cards .owl-carousel .active:nth-child(even) {
     padding-top: 0px;
   }
 }
