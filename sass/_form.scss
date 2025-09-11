@@ -1,6 +1,11 @@
 #gform_submit_button_1 {
   background-color: $color1;
   color: white;
-  padding: 15px 10px;
+  padding: 10px 15px;
   border-radius: 30px;
+  border: 0;
+  transition: all 0.3s ease;
+  :hover {
+    background-color: $color2;
+  }
 }
