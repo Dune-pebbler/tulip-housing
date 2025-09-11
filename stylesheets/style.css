@@ -830,6 +830,10 @@ a:hover {
   display: none;
 }
 
+.gfield_validation_message {
+  display: none;
+}
+
 .text_image {
   display: flex;
   justify-content: center;
