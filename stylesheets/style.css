@@ -817,6 +817,8 @@ a:hover {
 #gform_submit_button_1 {
   background-color: #b50d43;
   color: white;
+  padding: 15px 10px;
+  border-radius: 30px;
 }
 
 .text_image {
