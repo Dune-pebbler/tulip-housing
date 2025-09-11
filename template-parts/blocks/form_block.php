@@ -3,7 +3,7 @@ $form_text_field = get_sub_field('form_text_field');
 $form_form_field = get_sub_field('form_form_field');
 ?>
 <section class="form_block">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-1">
             </div>
