@@ -24,4 +24,11 @@
     border: 1px solid #9dac78;
     font-family: $font2;
   }
+  input,
+  textarea {
+    &::placeholder {
+      /* Standard syntax for modern browsers */
+      font-family: $font2;
+    }
+  }
 }

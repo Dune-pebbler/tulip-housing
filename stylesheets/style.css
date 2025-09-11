@@ -844,6 +844,15 @@ a:hover {
   border: 1px solid #9dac78;
   font-family: "DM Sans", sans-serif;
 }
+#gform_1 input::-moz-placeholder, #gform_1 textarea::-moz-placeholder {
+  /* Standard syntax for modern browsers */
+  font-family: "DM Sans", sans-serif;
+}
+#gform_1 input::placeholder,
+#gform_1 textarea::placeholder {
+  /* Standard syntax for modern browsers */
+  font-family: "DM Sans", sans-serif;
+}
 
 .text_image {
   display: flex;
