@@ -842,6 +842,7 @@ a:hover {
 #gform_1 select,
 #gform_1 textarea {
   border: 1px solid #9dac78;
+  font-family: "DM Sans", sans-serif;
 }
 
 .text_image {
