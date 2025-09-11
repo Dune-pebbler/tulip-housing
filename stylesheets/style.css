@@ -822,8 +822,12 @@ a:hover {
   border: 0;
   transition: all 0.3s ease;
 }
-#gform_submit_button_1 :hover {
+#gform_submit_button_1:hover {
   background-color: #ed8895;
+}
+
+.gform_validation_errors {
+  display: none;
 }
 
 .text_image {

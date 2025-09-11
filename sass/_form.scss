@@ -5,7 +5,10 @@
   border-radius: 30px;
   border: 0;
   transition: all 0.3s ease;
-  :hover {
+  &:hover {
     background-color: $color2;
   }
+}
+.gform_validation_errors {
+  display: none;
 }
