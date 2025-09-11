@@ -24,6 +24,7 @@
       <nav>
         <div class="container">
           <div class="row justify-content-center">
+
             <div class="logo">
               <a href="/" title="Home">
                 <?php $header_logo = get_field('footer_logo', 'option'); ?>
@@ -32,55 +33,40 @@
                 <?php endif; ?>
               </a>
             </div>
-            <div class="col-6 nav-container">
-              <div class="nav-items">
-                <div id="cross">
-                  <div class="cross-line-1"></div>
-                  <div class="cross-line-2"></div>
-                </div>
-                <div>
-                  <?php
-                  wp_nav_menu([
-                    'theme_location' => 'primary',
-                    'menu_class' => 'primary-nav',
-                    'container_class' => 'menu-primary-container'
-                  ]);
-                  ?>
-                  <div class="mobile-menu-secondary-menu">
-                    <?php
-                    wp_nav_menu([
-                      'theme_location' => 'secondary',
-                      'menu_class' => 'secondary-nav',
-                      'container_class' => 'menu-secondary-container'
-                    ]);
-                    ?>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 nav-container mobile-location">
-              <!-- menu items -->
-              <div class="nav-items">
-                <div id="cross">
-                  <div class="cross-line-1"></div>
-                  <div class="cross-line-2"></div>
-                </div>
-                <?php
-                wp_nav_menu([
-                  'theme_location' => 'secondary',
-                  'menu_class' => 'secondary-nav',
-                  'container_class' => 'menu-secondary-container'
-                ]);
-                ?>
+
+            <div id="nav-items" class="nav-items">
+
+              <div id="cross">
+                <div class="cross-line-1"></div>
+                <div class="cross-line-2"></div>
               </div>
 
-              <!-- hamburger -->
-              <div class="hamburger">
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
+              <div>
+                <?php
+                wp_nav_menu([
+                  'theme_location' => 'primary',
+                  'menu_class' => 'primary-nav',
+                  'container_class' => 'menu-primary-container'
+                ]);
+                ?>
+                <div class="mobile-menu-secondary-menu">
+                  <?php
+                  wp_nav_menu([
+                    'theme_location' => 'secondary',
+                    'menu_class' => 'secondary-nav',
+                    'container_class' => 'menu-secondary-container'
+                  ]);
+                  ?>
+                </div>
               </div>
             </div>
+
+            <div class="hamburger">
+              <div class="hamburger-line"></div>
+              <div class="hamburger-line"></div>
+              <div class="hamburger-line"></div>
+            </div>
+
           </div>
         </div>
       </nav>
