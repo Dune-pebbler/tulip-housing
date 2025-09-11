@@ -90,6 +90,10 @@ get_header(); ?>
                         <?php get_template_part('template-parts/blocks/corevalues'); ?>
                 <?php endif; ?>
 
+                <?php if (get_row_layout() === 'form_block'): ?>
+                        <?php get_template_part('template-parts/blocks/form_block'); ?>
+                <?php endif; ?>
+
         <?php endwhile; ?>
 <?php endif; ?>
 
