@@ -834,6 +834,15 @@ a:hover {
   display: none;
 }
 
+#gform_1 {
+  width: 75%;
+}
+#gform_1 input,
+#gform_1 select,
+#gform_1 textarea {
+  border: 1px solid #9dac78;
+}
+
 .text_image {
   display: flex;
   justify-content: center;

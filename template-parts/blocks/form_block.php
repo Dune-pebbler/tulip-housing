@@ -4,7 +4,7 @@ $form_form_field = get_sub_field('form_form_field');
 ?>
 <section class="form_block">
     <div class="container-fluid">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-lg-1">
             </div>
             <div class="col-12 col-lg-4">
