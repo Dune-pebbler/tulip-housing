@@ -87,18 +87,6 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 text-center">
-                <div class="btn__container">
-                    <?php $lang = isset($_GET['lang']) ? strtolower($_GET['lang']) : ''; ?>
-                    <a href="<?php echo ($lang === 'en' ? '/en/news' : '/nieuws'); ?>" class="btn news-load-more-btn">
-                        <?php echo ($lang === 'en' ? 'View all news' : 'Bekijk alle nieuwsberichten'); ?>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-
         <!-- Mobile individual slider -->
         <div class="row d-md-none">
             <!-- show only below md -->
@@ -136,5 +124,18 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="btn__container">
+                    <?php $lang = isset($_GET['lang']) ? strtolower($_GET['lang']) : ''; ?>
+                    <a href="<?php echo ($lang === 'en' ? '/en/news' : '/nieuws'); ?>" class="btn news-load-more-btn">
+                        <?php echo ($lang === 'en' ? 'View all news' : 'Bekijk alle nieuwsberichten'); ?>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+
     </div>
 </section>
