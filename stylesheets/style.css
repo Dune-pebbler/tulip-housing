@@ -847,17 +847,20 @@ a:hover {
   border: 1px solid #9dac78;
   font-family: "DM Sans", sans-serif;
   border-radius: 29px;
+  padding-left: 15px;
 }
 #gform_1 input::-moz-placeholder, #gform_1 textarea::-moz-placeholder {
   /* Standard syntax for modern browsers */
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
+  color: #000;
 }
 #gform_1 input::placeholder,
 #gform_1 textarea::placeholder {
   /* Standard syntax for modern browsers */
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
+  color: #000;
 }
 
 .form_block .form-text-field {

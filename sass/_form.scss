@@ -26,6 +26,7 @@
     border: 1px solid #9dac78;
     font-family: $font2;
     border-radius: 29px;
+    padding-left: 15px;
   }
   input,
   textarea {
@@ -33,6 +34,7 @@
       /* Standard syntax for modern browsers */
       font-family: $font2;
       font-weight: 700;
+      color: $black;
     }
   }
 }
