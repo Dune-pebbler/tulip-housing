@@ -7,7 +7,7 @@ $form_text_img = get_sub_field('form_text_img');
     <div class="container-fluid">
         <div class="row justify-content-center">
 
-            <div class="col-12 col-lg-5 form-text-field">
+            <div class="col-12 col-lg-4 form-text-field">
                 <div class="form-text-field__content">
                     <?= $form_text_field; ?>
                     <?php if ($form_text_img): ?>
@@ -15,7 +15,7 @@ $form_text_img = get_sub_field('form_text_img');
                     <?php endif; ?>
                 </div>
             </div>
-            <div class="col-12 col-lg-7 form-form-field">
+            <div class="col-12 col-lg-8 form-form-field">
                 <?= $form_form_field; ?>
             </div>
         </div>
