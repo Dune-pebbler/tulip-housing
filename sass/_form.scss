@@ -15,7 +15,7 @@
   font-family: $font1;
   text-transform: uppercase;
   @media screen and (max-width: 576px) {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 .gform_validation_errors {
@@ -27,7 +27,7 @@
 #gform_wrapper_1 {
   padding: 0 100px;
   @media screen and (max-width: 576px) {
-    padding: 0 50px;
+    padding: 0 20px;
   }
 }
 #gform_1 {
