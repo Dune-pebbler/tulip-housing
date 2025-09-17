@@ -858,6 +858,13 @@ a:hover {
   padding: 20px;
   background-color: #ecf4cb;
 }
+.form_block .form-text-field .form-text-field__content img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
 .form_block .form-text-field .form-form-field {
   background-color: #fff;
 }
