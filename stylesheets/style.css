@@ -826,6 +826,12 @@ a:hover {
   background-color: #ed8895;
 }
 
+.gform_title {
+  text-align: left;
+  font-size: 80px;
+  font-family: "DM Sans", sans-serif;
+}
+
 .gform_validation_errors {
   display: none;
 }

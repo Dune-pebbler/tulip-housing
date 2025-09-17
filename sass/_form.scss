@@ -9,6 +9,11 @@
     background-color: $color2;
   }
 }
+.gform_title {
+  text-align: left;
+  font-size: 80px;
+  font-family: $font2;
+}
 .gform_validation_errors {
   display: none;
 }
