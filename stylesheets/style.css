@@ -2507,7 +2507,7 @@ a:hover {
 }
 .contact-banner img {
   width: 100%;
-  height: 60vh;
+  height: 450px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: left center;
@@ -2527,9 +2527,9 @@ a:hover {
   line-height: 1;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   .contact-banner img {
-    height: 50vh;
+    height: 300px;
     -o-object-position: right center;
        object-position: right center;
   }
