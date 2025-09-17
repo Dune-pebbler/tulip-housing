@@ -900,8 +900,18 @@ a:hover {
   padding: 80px;
   background-color: #ecf4cb;
 }
+@media screen and (max-width: 576px) {
+  .form_block .form-text-field {
+    padding: 20px;
+  }
+}
 .form_block .form-text-field .form-text-field__content p {
   font-weight: 700;
+}
+@media screen and (max-width: 576px) {
+  .form_block .form-text-field .form-text-field__content p {
+    font-size: 16px;
+  }
 }
 .form_block .form-text-field .form-text-field__content img {
   width: 100%;

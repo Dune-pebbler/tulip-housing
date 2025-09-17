@@ -72,9 +72,15 @@
   .form-text-field {
     padding: 80px;
     background-color: $color5;
+    @media screen and (max-width: 576px) {
+      padding: 20px;
+    }
     .form-text-field__content {
       p {
         font-weight: 700;
+        @media screen and (max-width: 576px) {
+          font-size: 16px;
+        }
       }
       img {
         width: 100%;
