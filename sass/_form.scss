@@ -1,6 +1,6 @@
 #gform_submit_button_1 {
   background-color: $color1;
-  color: white;
+  color: white !important;
   padding: 10px 15px;
   border-radius: 30px;
   border: 0;
@@ -16,7 +16,7 @@
   display: none;
 }
 #gform_wrapper_1 {
-  padding: 0 50px;
+  padding: 0 100px;
 }
 #gform_1 {
   font-family: $font2;
@@ -39,6 +39,11 @@
       font-weight: 700;
       color: $black;
     }
+  }
+}
+#gform_1 {
+  select {
+    background-color: $color5;
   }
 }
 

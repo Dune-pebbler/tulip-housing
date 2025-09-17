@@ -816,7 +816,7 @@ a:hover {
 
 #gform_submit_button_1 {
   background-color: #b50d43;
-  color: white;
+  color: white !important;
   padding: 10px 15px;
   border-radius: 30px;
   border: 0;
@@ -835,7 +835,7 @@ a:hover {
 }
 
 #gform_wrapper_1 {
-  padding: 0 50px;
+  padding: 0 100px;
 }
 
 #gform_1 {
@@ -864,6 +864,10 @@ a:hover {
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
   color: #000;
+}
+
+#gform_1 select {
+  background-color: #ecf4cb;
 }
 
 .form_block .form-text-field {
