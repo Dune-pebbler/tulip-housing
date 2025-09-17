@@ -2501,6 +2501,23 @@ a:hover {
   }
 }
 
+.contact-banner {
+  position: relative;
+  overflow-x: hidden;
+}
+.contact-banner__title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  margin-left: 20px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 100px;
+  font-family: "aptly", sans-serif;
+  line-height: 1;
+}
+
 .header-wrapper {
   position: fixed;
   top: 0;
