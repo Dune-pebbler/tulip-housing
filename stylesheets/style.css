@@ -854,6 +854,13 @@ a:hover {
   font-family: "DM Sans", sans-serif;
 }
 
+.form_block .form-text-field {
+  background-color: #ecf4cb;
+}
+.form_block .form-form-field {
+  background-color: #fff;
+}
+
 .text_image {
   display: flex;
   justify-content: center;
