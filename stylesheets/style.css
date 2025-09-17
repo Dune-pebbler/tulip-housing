@@ -849,13 +849,14 @@ a:hover {
   border-radius: 29px;
   padding-left: 15px;
 }
-#gform_1 input::-moz-placeholder, #gform_1 textarea::-moz-placeholder {
+#gform_1 input::-moz-placeholder, #gform_1 select::-moz-placeholder, #gform_1 textarea::-moz-placeholder {
   /* Standard syntax for modern browsers */
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
   color: #000;
 }
 #gform_1 input::placeholder,
+#gform_1 select::placeholder,
 #gform_1 textarea::placeholder {
   /* Standard syntax for modern browsers */
   font-family: "DM Sans", sans-serif;
