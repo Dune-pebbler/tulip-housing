@@ -23,6 +23,7 @@
   textarea {
     border: 1px solid #9dac78;
     font-family: $font2;
+    border-radius: 29px;
   }
   input,
   textarea {
@@ -35,7 +36,7 @@
 
 .form_block {
   .form-text-field {
-    padding: 20px;
+    padding: 80px;
     background-color: $color5;
     .form-text-field__content {
       img {

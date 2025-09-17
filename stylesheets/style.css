@@ -843,6 +843,7 @@ a:hover {
 #gform_1 textarea {
   border: 1px solid #9dac78;
   font-family: "DM Sans", sans-serif;
+  border-radius: 29px;
 }
 #gform_1 input::-moz-placeholder, #gform_1 textarea::-moz-placeholder {
   /* Standard syntax for modern browsers */
@@ -855,7 +856,7 @@ a:hover {
 }
 
 .form_block .form-text-field {
-  padding: 20px;
+  padding: 80px;
   background-color: #ecf4cb;
 }
 .form_block .form-text-field .form-text-field__content img {
