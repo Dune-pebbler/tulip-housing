@@ -94,6 +94,10 @@ get_header(); ?>
                         <?php get_template_part('template-parts/blocks/form_block'); ?>
                 <?php endif; ?>
 
+                <?php if (get_row_layout() === 'contact-banner'): ?>
+                        <?php get_template_part('template-parts/blocks/contact-banner'); ?>
+                <?php endif; ?>
+
         <?php endwhile; ?>
 <?php endif; ?>
 
