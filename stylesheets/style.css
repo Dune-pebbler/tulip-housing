@@ -847,6 +847,8 @@ a:hover {
   border: 1px solid #9dac78;
   font-family: "DM Sans", sans-serif;
   border-radius: 29px;
+  font-weight: 700;
+  color: #000;
   padding-left: 15px;
 }
 #gform_1 input::-moz-placeholder, #gform_1 select::-moz-placeholder, #gform_1 textarea::-moz-placeholder {
