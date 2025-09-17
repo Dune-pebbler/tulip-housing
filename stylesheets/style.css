@@ -841,6 +841,14 @@ a:hover {
 #gform_1 {
   font-family: "DM Sans", sans-serif;
 }
+#gform_1 .gfield_description {
+  font-weight: 700;
+  color: #000;
+}
+#gform_1 .gfield_label {
+  font-weight: 700;
+  color: #000;
+}
 #gform_1 input,
 #gform_1 select,
 #gform_1 textarea {
@@ -868,6 +876,7 @@ a:hover {
 
 #gform_1 select {
   background-color: #ecf4cb;
+  border: 1px solid #ecf4cb;
 }
 
 .form_block .form-text-field {

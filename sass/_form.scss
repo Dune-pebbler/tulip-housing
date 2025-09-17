@@ -19,6 +19,14 @@
   padding: 0 100px;
 }
 #gform_1 {
+  .gfield_description {
+    font-weight: 700;
+    color: $black;
+  }
+  .gfield_label {
+    font-weight: 700;
+    color: $black;
+  }
   font-family: $font2;
   input,
   select,
@@ -44,6 +52,7 @@
 #gform_1 {
   select {
     background-color: $color5;
+    border: 1px solid $color5;
   }
 }
 
