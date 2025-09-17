@@ -907,6 +907,7 @@ a:hover {
 }
 .form_block .form-text-field .form-text-field__content p {
   font-weight: 700;
+  margin-bottom: 30px;
 }
 @media screen and (max-width: 576px) {
   .form_block .form-text-field .form-text-field__content p {
