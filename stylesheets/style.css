@@ -834,8 +834,11 @@ a:hover {
   display: none;
 }
 
+#gform_wrapper_1 {
+  padding: 0 50px;
+}
+
 #gform_1 {
-  width: 75%;
   font-family: "DM Sans", sans-serif;
 }
 #gform_1 input,
@@ -848,16 +851,21 @@ a:hover {
 #gform_1 input::-moz-placeholder, #gform_1 textarea::-moz-placeholder {
   /* Standard syntax for modern browsers */
   font-family: "DM Sans", sans-serif;
+  font-weight: 700;
 }
 #gform_1 input::placeholder,
 #gform_1 textarea::placeholder {
   /* Standard syntax for modern browsers */
   font-family: "DM Sans", sans-serif;
+  font-weight: 700;
 }
 
 .form_block .form-text-field {
   padding: 80px;
   background-color: #ecf4cb;
+}
+.form_block .form-text-field .form-text-field__content p {
+  font-weight: 700;
 }
 .form_block .form-text-field .form-text-field__content img {
   width: 100%;
