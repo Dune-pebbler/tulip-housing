@@ -855,9 +855,10 @@ a:hover {
 }
 
 .form_block .form-text-field {
+  padding: 20px;
   background-color: #ecf4cb;
 }
-.form_block .form-form-field {
+.form_block .form-text-field .form-form-field {
   background-color: #fff;
 }
 
