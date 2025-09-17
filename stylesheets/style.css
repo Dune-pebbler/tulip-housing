@@ -2505,19 +2505,35 @@ a:hover {
   position: relative;
   overflow-x: hidden;
 }
+.contact-banner img {
+  width: 100%;
+  height: 60vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left center;
+     object-position: left center;
+  display: block;
+}
 .contact-banner__title {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 5%;
   transform: translateY(-50%);
   margin-left: 20px;
   color: #fff;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 100px;
   font-family: "aptly", sans-serif;
   line-height: 1;
 }
 
+@media screen and (max-width: 992px) {
+  .contact-banner img {
+    height: 50vh;
+    -o-object-position: right center;
+       object-position: right center;
+  }
+}
 .header-wrapper {
   position: fixed;
   top: 0;
