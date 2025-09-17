@@ -14,6 +14,9 @@
   font-size: 80px;
   font-family: $font1;
   text-transform: uppercase;
+  @media screen and (max-width: 576px) {
+    font-size: 40px;
+  }
 }
 .gform_validation_errors {
   display: none;
@@ -23,6 +26,9 @@
 }
 #gform_wrapper_1 {
   padding: 0 100px;
+  @media screen and (max-width: 576px) {
+    padding: 0 50px;
+  }
 }
 #gform_1 {
   .gfield_description {

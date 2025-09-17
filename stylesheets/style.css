@@ -832,6 +832,11 @@ a:hover {
   font-family: "aptly", sans-serif;
   text-transform: uppercase;
 }
+@media screen and (max-width: 576px) {
+  .gform_title {
+    font-size: 40px;
+  }
+}
 
 .gform_validation_errors {
   display: none;
@@ -843,6 +848,11 @@ a:hover {
 
 #gform_wrapper_1 {
   padding: 0 100px;
+}
+@media screen and (max-width: 576px) {
+  #gform_wrapper_1 {
+    padding: 0 50px;
+  }
 }
 
 #gform_1 {
