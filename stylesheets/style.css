@@ -925,6 +925,10 @@ a:hover {
   background-color: #fff;
 }
 
+.gform-field-label {
+  color: black;
+}
+
 .text_image {
   display: flex;
   justify-content: center;
