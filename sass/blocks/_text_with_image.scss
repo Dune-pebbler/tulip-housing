@@ -32,7 +32,7 @@
   }
 
   // When layout is reversed, position the ::before element on the right
-  .reverse &::before {
+  .row.reverse &::before {
     left: auto !important;
     right: 0% !important;
   }
