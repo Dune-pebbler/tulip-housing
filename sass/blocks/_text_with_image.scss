@@ -31,11 +31,12 @@
     }
   }
 
-  // **FIXED**: When layout is reversed, position the ::before element on the right
+  // **FIXED BLOCK**: When layout is reversed, position the ::before element on the right
+  // This uses a descendant selector and !important to ensure override of default 'left: 0%'
   .row.reverse {
     &::before {
-      left: auto; /* Override the default left: 0% */
-      right: 0%; /* Position on the right side */
+      left: auto !important; /* Force override of the default left: 0% */
+      right: 0% !important; /* Force position on the right side */
     }
   }
 

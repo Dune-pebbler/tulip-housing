@@ -1317,8 +1317,8 @@ a:hover {
   }
 }
 .text_with_image .row.reverse::before {
-  left: auto; /* Override the default left: 0% */
-  right: 0%; /* Position on the right side */
+  left: auto !important; /* Force override of the default left: 0% */
+  right: 0% !important; /* Force position on the right side */
 }
 .text_with_image__image-container {
   height: 100%;
