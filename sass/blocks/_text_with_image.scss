@@ -14,7 +14,7 @@
     background-repeat: no-repeat;
     vertical-align: middle;
     position: absolute;
-    right: 0%;
+    left: 0%;
     bottom: 0%;
     z-index: 1;
     opacity: 0.3;
@@ -31,10 +31,10 @@
     }
   }
 
-  // When layout is reversed, position the ::before element on the left
+  // When layout is reversed, position the ::before element on the right
   .reverse &::before {
-    right: auto;
-    left: 0%;
+    left: auto;
+    right: 0%;
   }
   &__image-container {
     height: 100%;

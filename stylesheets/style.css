@@ -1294,7 +1294,7 @@ a:hover {
   background-repeat: no-repeat;
   vertical-align: middle;
   position: absolute;
-  right: 0%;
+  left: 0%;
   bottom: 0%;
   z-index: 1;
   opacity: 0.3;
@@ -1317,8 +1317,8 @@ a:hover {
   }
 }
 .reverse .text_with_image::before {
-  right: auto;
-  left: 0%;
+  left: auto;
+  right: 0%;
 }
 .text_with_image__image-container {
   height: 100%;
