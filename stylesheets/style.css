@@ -1294,7 +1294,7 @@ a:hover {
   background-repeat: no-repeat;
   vertical-align: middle;
   position: absolute;
-  left: 0%;
+  right: 0%;
   bottom: 0%;
   z-index: 1;
   opacity: 0.3;
@@ -1315,10 +1315,6 @@ a:hover {
     width: 300px; /* Scaled down from 422.351px */
     height: 350px; /* Scaled down from 526.896px */
   }
-}
-.text_with_image .row.reverse::before {
-  left: auto !important; /* Force override of the default left: 0% */
-  right: 0% !important; /* Force position on the right side */
 }
 .text_with_image__image-container {
   height: 100%;

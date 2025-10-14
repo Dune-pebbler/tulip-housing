@@ -14,7 +14,7 @@
     background-repeat: no-repeat;
     vertical-align: middle;
     position: absolute;
-    left: 0%;
+    right: 0%;
     bottom: 0%;
     z-index: 1;
     opacity: 0.3;
@@ -30,16 +30,6 @@
       height: 350px; /* Scaled down from 526.896px */
     }
   }
-
-  // **FIXED BLOCK**: When layout is reversed, position the ::before element on the right
-  // This uses a descendant selector and !important to ensure override of default 'left: 0%'
-  .row.reverse {
-    &::before {
-      left: auto !important; /* Force override of the default left: 0% */
-      right: 0% !important; /* Force position on the right side */
-    }
-  }
-
   &__image-container {
     height: 100%;
     width: 100%;
