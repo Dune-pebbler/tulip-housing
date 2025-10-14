@@ -1316,6 +1316,10 @@ a:hover {
     height: 350px; /* Scaled down from 526.896px */
   }
 }
+.reverse .text_with_image::before {
+  right: auto;
+  left: 0%;
+}
 .text_with_image__image-container {
   height: 100%;
   width: 100%;

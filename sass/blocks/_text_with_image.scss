@@ -30,6 +30,12 @@
       height: 350px; /* Scaled down from 526.896px */
     }
   }
+
+  // When layout is reversed, position the ::before element on the left
+  .reverse &::before {
+    right: auto;
+    left: 0%;
+  }
   &__image-container {
     height: 100%;
     width: 100%;
