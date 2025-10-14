@@ -27,9 +27,9 @@
     position: relative;
     z-index: 2;
     &::before {
-      display: none;
       content: "";
       display: inline-block;
+      display: none;
       width: 422px; /* Scaled down from 422.351px */
       height: 526px; /* Scaled down from 526.896px */
       margin-right: 10px;

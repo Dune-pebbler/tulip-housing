@@ -1313,9 +1313,9 @@ a:hover {
   z-index: 2;
 }
 .text_with_image__text-container-container::before {
-  display: none;
   content: "";
   display: inline-block;
+  display: none;
   width: 422px; /* Scaled down from 422.351px */
   height: 526px; /* Scaled down from 526.896px */
   margin-right: 10px;
