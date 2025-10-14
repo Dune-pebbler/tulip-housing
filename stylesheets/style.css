@@ -1317,8 +1317,8 @@ a:hover {
   }
 }
 .reverse .text_with_image::before {
-  left: auto;
-  right: 0%;
+  left: auto !important;
+  right: 0% !important;
 }
 .text_with_image__image-container {
   height: 100%;
