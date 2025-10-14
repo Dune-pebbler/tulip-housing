@@ -1313,6 +1313,7 @@ a:hover {
   z-index: 2;
 }
 .text_with_image__text-container-container::before {
+  display: none;
   content: "";
   display: inline-block;
   width: 422px; /* Scaled down from 422.351px */
