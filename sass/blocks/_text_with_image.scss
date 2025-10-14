@@ -31,11 +31,14 @@
     }
   }
 
-  // When layout is reversed, position the ::before element on the right
-  .row.reverse &::before {
-    left: auto !important;
-    right: 0% !important;
+  // **FIXED**: When layout is reversed, position the ::before element on the right
+  .row.reverse {
+    &::before {
+      left: auto; /* Override the default left: 0% */
+      right: 0%; /* Position on the right side */
+    }
   }
+
   &__image-container {
     height: 100%;
     width: 100%;

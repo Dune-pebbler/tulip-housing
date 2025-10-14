@@ -1316,9 +1316,9 @@ a:hover {
     height: 350px; /* Scaled down from 526.896px */
   }
 }
-.row.reverse .text_with_image::before {
-  left: auto !important;
-  right: 0% !important;
+.text_with_image .row.reverse::before {
+  left: auto; /* Override the default left: 0% */
+  right: 0%; /* Position on the right side */
 }
 .text_with_image__image-container {
   height: 100%;
