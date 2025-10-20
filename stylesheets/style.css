@@ -3258,6 +3258,7 @@ footer .footer-main .row .socials {
   color: black;
   text-decoration: none;
   transition: all 0.3s ease;
+  margin: 20px 0px;
 }
 .privacy-link:hover {
   color: #b50d43;
@@ -3267,6 +3268,7 @@ footer .footer-main .row .socials {
   color: black;
   text-decoration: none;
   transition: all 0.3s ease;
+  margin: 20px 0px;
 }
 .disclaimer-link:hover {
   color: #b50d43;
