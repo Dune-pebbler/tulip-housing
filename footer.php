@@ -40,7 +40,7 @@ $socials_repeater = get_field('socials', 'option');
     </div>
   </section>
   <div class="footer-main">
-    <div class="container-fluid">
+    <div class="container">
       <div class="reference">
         <div class="row justify-content-around">
           <div class="col-12 col-md-6 col-lg-4 p-0">
