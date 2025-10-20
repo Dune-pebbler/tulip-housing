@@ -114,7 +114,7 @@ $socials_repeater = get_field('socials', 'option');
           ?>
 
           <div class="col-3 text-center">
-            <a href="<?php echo htmlspecialchars($privacy_href); ?>">
+            <a class="privacy-link" href="<?php echo htmlspecialchars($privacy_href); ?>">
               <?php echo htmlspecialchars($privacy_text); ?>
             </a>
           </div>
@@ -132,7 +132,7 @@ $socials_repeater = get_field('socials', 'option');
           ?>
 
           <div class="col-3 text-center">
-            <a href="<?php echo htmlspecialchars($disclaimer_href); ?>">
+            <a class="disclaimer-link" href="<?php echo htmlspecialchars($disclaimer_href); ?>">
               <?php echo htmlspecialchars($disclaimer_text); ?>
             </a>
           </div>

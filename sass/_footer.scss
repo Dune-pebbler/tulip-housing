@@ -175,3 +175,19 @@ footer {
 #menu-footer-menu {
   margin-top: 0px;
 }
+.privacy-link {
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  &:hover {
+    color: $color1;
+  }
+}
+.disclaimer-link {
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  &:hover {
+    color: $color1;
+  }
+}
