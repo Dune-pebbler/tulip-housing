@@ -199,3 +199,9 @@ footer {
     color: $color1;
   }
 }
+.footer-links-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}

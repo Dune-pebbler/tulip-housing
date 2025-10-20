@@ -3280,6 +3280,13 @@ footer .footer-main .row .socials {
   color: #b50d43;
 }
 
+.footer-links-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
 section.error-404 {
   padding: 5em 0;
 }/*# sourceMappingURL=style.css.map */
