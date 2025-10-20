@@ -180,6 +180,9 @@ footer {
   text-decoration: none;
   transition: all 0.3s ease;
   margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &:hover {
     color: $color1;
   }
@@ -189,6 +192,9 @@ footer {
   text-decoration: none;
   transition: all 0.3s ease;
   margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &:hover {
     color: $color1;
   }
