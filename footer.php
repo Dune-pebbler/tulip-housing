@@ -97,7 +97,7 @@ $socials_repeater = get_field('socials', 'option');
           </div>
         </div>
         <div class="row">
-          <div class="col-4 text-center">
+          <div class="col-6 col-md-4 text-center">
             <p id="copyright"></p>
           </div>
           <?php
@@ -113,7 +113,7 @@ $socials_repeater = get_field('socials', 'option');
           }
           ?>
 
-          <div class="col-2 text-center">
+          <div class="col-6 col-md-2 text-center">
             <div class="privacy-link-container">
               <a class="privacy-link" href="<?php echo htmlspecialchars($privacy_href); ?>">
                 <?php echo htmlspecialchars($privacy_text); ?>
@@ -133,14 +133,14 @@ $socials_repeater = get_field('socials', 'option');
           }
           ?>
 
-          <div class="col-2 text-center">
+          <div class="col-6 col-md-2 text-center">
             <div class="disclaimer-link-container">
               <a class="disclaimer-link" href="<?php echo htmlspecialchars($disclaimer_href); ?>">
                 <?php echo htmlspecialchars($disclaimer_text); ?>
               </a>
             </div>
           </div>
-          <div class="col-4 justify-content-center">
+          <div class="col-6 col-md-4 justify-content-center">
             <div class="dp-container">
               <p><a href="https://dunepebbler.nl/">Website door: <svg id="Group_116" data-name="Group 116"
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 45.994"
