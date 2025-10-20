@@ -5,7 +5,8 @@ $hero_button = get_sub_field('hero_button');
 ?>
 
 <section class="hero">
-    <img class="hero__img" src="<?= $hero_img['url']; ?>" alt="">
+    <img class="hero__img" src="<?= $hero_img['url']; ?>" alt="<?= $hero_img['alt']; ?>" loading="eager"
+        fetchpriority="high">
 
     <?php if ($hero_title): ?>
         <div class="hero__overlay">
