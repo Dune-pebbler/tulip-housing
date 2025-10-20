@@ -683,6 +683,7 @@ ul {
   font-family: "Open Sans", sans-serif;
   font-weight: 100;
   list-style: disc;
+  width: 100%;
 }
 ul li {
   margin-bottom: 15px;
@@ -691,6 +692,7 @@ ul li {
 
 ol {
   color: black;
+  width: 100%;
 }
 
 strong {
