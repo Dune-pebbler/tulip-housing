@@ -10,6 +10,12 @@ $services_posts = new WP_Query(array(
     'orderby' => 'date',
     'order' => 'ASC'
 ));
+
+
+if (isset($_GET['lang']) && $_GET['lang'] == 'en') {
+    $services_title = "Our services";
+} else {
+}
 ?>
 <section class="services <?= $service_background_color; ?> <?= $show_red_before ? 'has-colored-before' : ''; ?>">
     <div class="container fade-in-on-scroll">
