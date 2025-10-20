@@ -138,6 +138,7 @@ $socials_repeater = get_field('socials', 'option');
 
           <div class="col-12 justify-content-end">
             <div class="footer-links-container">
+              <p id="copyright"></p>
               <div class="privacy-link-container">
                 <a class="privacy-link" href="<?php echo htmlspecialchars($privacy_href); ?>">
                   <?php echo htmlspecialchars($privacy_text); ?>
@@ -149,7 +150,7 @@ $socials_repeater = get_field('socials', 'option');
                 </a>
               </div>
             </div>
-            <p id="copyright"></p>
+
           </div>
         </div>
         <div class="dp-container">
