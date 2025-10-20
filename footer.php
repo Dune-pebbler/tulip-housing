@@ -103,27 +103,27 @@ $socials_repeater = get_field('socials', 'option');
           <?php
           // 1. Set default values
           $privacy_href = '/privacybeleid';
-          $privacy_text = 'Privacybeleid';
+          $privacy_text = 'Privacybeleid - ';
 
           // 2. Check the URL parameter
           if (isset($_GET['lang']) && $_GET['lang'] === 'en') {
             // 3. Set English values if true
             $privacy_href = '/privacy-policy?lang=en';
-            $privacy_text = 'Privacy';
+            $privacy_text = 'Privacy - ';
           }
           ?>
 
-          <div class="col-6 col-md-2 text-center">
-            <div class="privacy-link-container">
-              <a class="privacy-link" href="<?php echo htmlspecialchars($privacy_href); ?>">
-                <?php echo htmlspecialchars($privacy_text); ?>
-              </a>
-            </div>
+
+          <div class="privacy-link-container">
+            <a class="privacy-link" href="<?php echo htmlspecialchars($privacy_href); ?>">
+              <?php echo htmlspecialchars($privacy_text); ?>
+            </a>
           </div>
+
           <?php
           // 1. Set default values
           $disclaimer_href = '/disclaimer';
-          $disclaimer_text = 'Disclaimer';
+          $disclaimer_text = 'Disclaimer - ';
 
           // 2. Check if lang=en
           if (isset($_GET['lang']) && $_GET['lang'] === 'en') {
@@ -133,14 +133,21 @@ $socials_repeater = get_field('socials', 'option');
           }
           ?>
 
-          <div class="col-6 col-md-2 text-center">
+
+
+
+          <div class="col-12 justify-content-end">
+            <p id="copyright"></p>
+            <div class="privacy-link-container">
+              <a class="privacy-link" href="<?php echo htmlspecialchars($privacy_href); ?>">
+                <?php echo htmlspecialchars($privacy_text); ?>
+              </a>
+            </div>
             <div class="disclaimer-link-container">
               <a class="disclaimer-link" href="<?php echo htmlspecialchars($disclaimer_href); ?>">
                 <?php echo htmlspecialchars($disclaimer_text); ?>
               </a>
             </div>
-          </div>
-          <div class="col-6 col-md-4 justify-content-center">
             <div class="dp-container">
               <p><a href="https://dunepebbler.nl/">Website door: <svg id="Group_116" data-name="Group 116"
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 45.994"
